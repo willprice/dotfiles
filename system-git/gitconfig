@@ -1,0 +1,39 @@
+# vim: set sw=2 ts=2:
+[push]
+  default = matching
+
+[alias]
+  # GRAPH MANIPULATION
+  co = checkout
+  ci = commit
+  cob = checkout -b
+  br = branch
+  amend = commit --amend
+  undo = reset HEAD~1 --mixed
+  save = !git add --all && git commit -m 'SAVE'
+  wip = commit --all -m 'WIP'
+  wipe = !git add --all && git commit --quiet -m 'WIPE SAVE' && git reset HEAD~1 --hard
+
+  # REMOTES
+  # --rebase: rebase local commits onto new remote commits
+  # --prune: delete branches from local that have been deleted from
+  #          remote
+  up = git pull --rebase --prune
+
+  # LOGGING
+  # --graph: text based graph
+  # --decorate: print out the names of branches/tags/remotes associated
+  #             with commit hashes
+  # --pretty=oneline: pretty-print contents of the logs on a single line
+  # --pretty=medium: pretty-print contents of the logs with
+  #                  author/date/title line
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lolv = log --graph --decorate --pretty=short --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  st = status
+
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
