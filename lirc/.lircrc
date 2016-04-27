@@ -1,0 +1,48 @@
+begin
+  prog = irexec
+  button = KEY_MUTE
+  config = /home/will/.bin/pulsevolcontrol toggle
+  repeat = 0
+end
+
+begin
+  prog = irexec
+  button = KEY_VOLUMEUP
+  config = /home/will/.bin/pulsevolcontrol up
+  repeat = 1
+end
+
+begin
+  prog = irexec
+  button = KEY_VOLUMEDOWN
+  config = /home/will/.bin/pulsevolcontrol down
+  repeat = 1
+end
+
+begin 
+  prog = irexec
+  button = KEY_PLAYPAUSE
+  config = mpc toggle
+  repeat = 0
+end
+
+begin 
+  prog = irexec
+  button = KEY_AGAIN
+  config = mpc prev
+  repeat = 0
+end
+
+begin 
+  prog = irexec
+  button = KEY_NEXT
+  config = mpc next
+  repeat = 0
+end
+
+begin 
+  prog = irexec
+  button = KEY_POWER
+  config = systemctl suspend
+  repeat = 0
+end
