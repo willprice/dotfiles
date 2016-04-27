@@ -1,0 +1,5 @@
+export LEJOS_HOME=/opt/lejos-rcx
+export RCXTTY=/dev/usb/legousbtower1
+export CLASSPATH="$CLASSPATH:.:$LEJOS_HOME/lib/classes.jar:$LEJOS_HOME/lib/pcrcxcomm.jar"
+
+#vim: set ft=bash

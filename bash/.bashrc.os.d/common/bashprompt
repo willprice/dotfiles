@@ -1,0 +1,150 @@
+# vim: ft=sh :
+
+# The color of the username in the prompt
+PROMPT_ROOT_COLOR=${PROMPT_SOL_RED}
+PROMPT_NON_ROOT_COLOR=${PROMPT_SOL_EMPH}
+
+# The color of the hostname
+PROMPT_HOST_COLOR=${PROMPT_SOL_EMPH}
+
+# The color of the current working directory in the prompt
+PROMPT_CWD_COLOR=${PROMPT_SOL_BODY_TXT}
+
+function ps1_git_prompt()
+{
+  git rev-parse --git-dir &> /dev/null || return
+  branch_pattern="^## ([^${IFS}.]*)"
+  changed_pattern="^.[MADRC]"
+  untracked_pattern="^[?]"
+  has_index_pattern="^[ADM]"
+  has_unmerged_pattern="^(.U)|^(U.)"
+
+  while IFS= read -r -d '' line ; do
+          if [[  ${line} =~ ${has_index_pattern} ]]; then
+            HAS_INDEX="${PROMPT_SOL_YELLOW}I"
+          fi
+          if [[  ${line} =~ ${untracked_pattern} ]]; then
+            UNTRACKED="${PROMPT_SOL_EMPH}?"
+          fi
+          if [[  ${line} =~ ${changed_pattern} ]]; then
+            MODIFIED_TRACKED="${PROMPT_SOL_RED}*"
+          fi
+          if [[  ${line} =~ ${has_unmerged_pattern} ]]; then
+            UNMERGED="${PROMPT_SOL_BODY_TXT}(unmerged)"
+          fi
+
+          if [[ ${line} =~ ${branch_pattern} ]]; then
+            BRANCH=${BASH_REMATCH[1]}
+          fi
+  done < <(git status --porcelain -b -z 2> /dev/null)
+
+
+  echo -n " ${PROMPT_SOL_COMMENT}[${PROMPT_SOL_GREEN}${BRANCH}${MODIFIED_TRACKED}${HAS_INDEX}${UNTRACKED}${PROMPT_SOL_BODY_TXT}${UNMERGED}${PROMPT_SOL_COMMENT}]${PROMPT_NO_COLOUR}"
+}
+
+
+function ps1_user_name()
+{
+  case $EUID in
+   0) echo ${PROMPT_ROOT_COLOR}\\u
+      ;;
+   *) echo ${PROMPT_NON_ROOT_COLOR}\\u
+      ;;
+  esac
+}
+
+
+PREVPWD=`pwd`
+handle_virtualenv(){
+  if [ "$PWD" != "$PREVPWD" ]; then
+    PREVPWD="$PWD";
+    if [ -n "$PREVENV_PATH" ]; then
+      if [ "`echo "$PWD" | grep -c $PREVENV_PATH`" = "0"  ]; then
+         source $PREVENV_PATH/.venv
+         echo "> Virtualenv `basename $VIRTUALENV_PATH` deactivated"
+         PS1=$PREV_PS1
+         PATH=$PREV_PATH
+         PREVENV_PATH=
+      fi
+    fi
+    # activate virtualenv dynamically
+    if [ -e "$PWD/.venv" ] && [ "$PWD" != "$PREVENV_PATH" ]; then
+      PREV_PS1="$PS1"
+      PREV_PATH="$PATH"
+      PREVENV_PATH="$PWD"
+      source $PWD/.venv
+      source $VIRTUALENV_PATH/bin/activate
+      echo "> Virtualenv `basename $VIRTUALENV_PATH` activated"
+    fi
+  fi
+}
+
+function ps1_python_virtualenv_prompt(){
+   if [ -d "$VIRTUAL_ENV" ]
+   then
+      VENV=$(basename $VIRTUAL_ENV)
+      echo -n "${PROMPT_SOL_COMMENT}(venv:${PROMPT_SOL_GREEN}${VENV}${PROMPT_SOL_COMMENT}) "
+   fi
+}
+
+function exit_code_prompt {
+    EXIT="$1"
+
+    # Exit codes: http://www.tldp.org/LDP/abs/html/exitcodes.html
+    # Smileys: http://en.wikipedia.org/wiki/Emoji#OS_X_Lion
+    local bold=`tput bold`
+    local normal=`tput sgr0`
+    local SMILEY="☺"
+    local CHECKMARK="✔"
+    local CROSS="✖"
+    local FEARFULL="😱"
+    local UNHAPPY="${bold}☹${normal}"
+    local VOLTAGE="⚡"
+    local SKULL="${bold}☠${normal}"
+
+    case "$EXIT" in
+     0) echo -n "${PROMPT_SOL_GREEN}$CHECKMARK ";
+        ;;
+     1) echo -n "${PROMPT_SOL_RED}$UNHAPPY [$EXIT] "; # 1 - Catchall for general errors
+        ;;
+     2) echo -n "${PROMPT_SOL_RED}$UNHAPPY [$EXIT] "; # 2 - Misuse of shell builtins (according to Bash documentation)
+        ;;
+     126) echo -n "${PROMPT_SOL_YELLOW}$CROSS "; # 126 - Command invoked cannot execute
+        ;;
+     127) echo -n "${PROMPT_SOL_YELLOW}? "; # 127 - "command not found"
+        ;;
+     130) echo -n "${PROMPT_SOL_YELLOW}$VOLTAGE "; # 130  SIGINT Script terminated by Control-C
+        ;;
+     131) echo -n "${PROMPT_SOL_RED}[QUIT]$SKULL "; # SIGQUIT
+        ;;
+     137) echo -n "${PROMPT_SOL_RED}[KILL]$SKULL "; # SIGKILL
+        ;;
+     143) echo -n "${PROMPT_SOL_YELLOW}[TERM]$SKULL "; # SIGTERM
+        ;;
+     148) echo -n "${PROMPT_SOL_GREEN}zZ "; # Ctrl-Z
+        ;;
+     *) echo -n "${PROMPT_SOL_RED}$FEARFULL [$EXIT] ";
+        ;;
+    esac
+}
+
+function shell_colored {
+    # capture the exit status of the last command
+    EXIT="$?"
+    PS1=$(exit_code_prompt $EXIT)
+
+
+    # if logged in via ssh shows the ip of the client
+    if [ -n "$SSH_CLIENT" ]; then
+        local src=""
+        local dst=""
+
+        read src _ dst _ < <(echo $SSH_CONNECTION)
+        PS1+="${PROMPT_SOL_EMPH}(${PROMPT_SOL_COMMENT}$src -> ${PROMPT_SOL_YELLOW}"${dst}"${PROMPT_SOL_EMPH}) ";
+    fi
+
+   PS1+="$(ps1_python_virtualenv_prompt)$(ps1_user_name)${PROMPT_SOL_COMMENT}@${PROMPT_HOST_COLOR}\h${PROMPT_SOL_COMMENT}:${PROMPT_CWD_COLOR}\w$(ps1_git_prompt)${PROMPT_NO_COLOUR} $ "
+}
+PROMPT_COMMAND=shell_colored
+
+
