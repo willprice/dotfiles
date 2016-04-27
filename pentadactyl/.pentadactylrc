@@ -1,0 +1,9 @@
+"hg7226
+
+loadplugins '\.(js|penta)$'
+group user
+set cdpath=''
+set hintkeys=asdfjkl;
+set passkeys=inbox.google.com:jke#,gi,mail.google.com:jk<CR>,gi
+
+" vim: set ft=pentadactyl:
