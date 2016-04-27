@@ -1,0 +1,20 @@
+output LVDS1
+primary
+auto
+output DP1
+off
+output DP2
+off
+output DP3
+off
+output HDMI1
+above LVDS1
+auto
+output HDMI2
+off
+output HDMI3
+off
+output VGA1
+off
+output VIRTUAL1
+off
