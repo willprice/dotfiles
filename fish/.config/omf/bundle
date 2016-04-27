@@ -1,0 +1,9 @@
+package ansible
+package foreign-env
+package git-flow
+package mvn
+package nvm
+package rvm
+package vcs
+package z
+theme bobthefish
