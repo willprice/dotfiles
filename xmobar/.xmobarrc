@@ -1,0 +1,17 @@
+Config { font = "xft:Terminus-12"
+       , lowerOnStart = False
+       , bgColor = "grey10"
+       , fgColor = "grey"
+       , position = BottomW R 100
+       , sepChar = "%"
+       , alignSep = "}{"
+       , commands = [ Run Date "%a %b %_d %l:%M" "date" 50
+                    , Run Battery ["-t", "<acstatus>(<left>%: <timeleft> hours)",
+                                   "-L", "10", "-H", "80", "-p", "3", "--",
+                                   "-O", "<fc=green>On</fc> - ", "-i", "On - ", "-L", "-15", "-H", "-5",
+                                   "-l", "red", "-m", "blue", "-h", "green"]
+                                   50
+                    , Run StdinReader
+                    ]
+       , template = "%StdinReader% } { %battery% <fc=#CF6F3C>%date%</fc>"
+}

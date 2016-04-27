@@ -1,0 +1,15 @@
+Config { font = "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1"
+       , bgColor = "grey10"
+       , fgColor = "grey"
+       , position = TopW L 100
+       , commands = [ Run MultiCpu ["-t","CPU: <autosystem>%","-L","8","-H","50","--normal","green","--high","red" ] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run Network "wlan0" ["-t","Network: Rx:<rx>KB Tx:<tx>KB"] 10
+                    , Run DiskU [("/home", "<used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "23"] 60
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ <fc=#CF6F3C>%date%</fc>"
+       }
