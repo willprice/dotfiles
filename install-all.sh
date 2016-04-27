@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # vim: set ft=sh:
-target_directory="$PWD"
+target_directory="${1:-$PWD}"
 cd $(dirname $(realpath $0))
 
 EXCLUDED_PACKAGES_REGEX=".*\(system\|personal\|x230\).*"
@@ -14,4 +14,3 @@ for unlinked_pacakge in $(find . -mindepth 1 -maxdepth 1 -type d -regex "$EXCLUD
   echo "* ${unlinked_pacakge##./}"
 done
 
-  
