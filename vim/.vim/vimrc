@@ -1,0 +1,113 @@
+" Setting this first prevents hiccups due to compatibility
+set nocompatible
+filetype off
+set encoding=utf-8
+
+
+" Set leader
+let mapleader=','
+
+" #### BUNDLES ####
+call plug#begin('~/.vim/bundle')
+for file in split(globpath(expand('~/.vim/config'), '*\.vim'), '\n')
+  exe 'source' file
+endfor
+call plug#end()
+
+" ##### MAPS ######
+" <leader>W removes trailing whitespace, neat!
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Tired of using esc for normal mode
+inoremap jj <ESC>
+
+" Autocomplete like eclipse
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@>     <C-x><C-o>
+
+" wrapped lines navigation
+nnoremap j gj
+nnoremap k gk
+
+" hlsearch toggle
+nnoremap <F1> :set hlsearch!<cr>
+
+" Toggle whitespace characters
+nnoremap <F4> :set list!<cr>
+
+" Switch lines
+nnoremap - ddp
+
+
+" ##### EDITOR CONF #####
+" Backspace expected behaviour
+set backspace=indent,eol,start
+
+" Hide buffers that aren't visible
+set hidden
+
+" Don't update the display while executing macros
+set lazyredraw
+
+" At least let yourself know what mode you're in
+set showmode
+
+" Enable enhanced command-line completion. Presumes you have compiled
+" with +wildmenu.  See :help 'wildmenu'
+set wildmenu
+
+" Wrap lines when vim can't display all of it
+set wrap
+
+" Set decent length history
+set history=1000
+
+" Add mouse support in the terminal - for scrolling only...
+set mouse=a
+
+" Set highlight search
+set hlsearch
+
+" Set incremental searching
+set incsearch
+
+" Work in screen
+set t_Co=256
+
+" Only match case sensitive when upper case letters are used in searches
+set smartcase
+
+" Set line numbering
+set number
+
+" Hide mouse pointer when typing
+set mousehide
+
+" Syntax coloring line limiting (large files take too long to load otherwise)
+set synmaxcol=2048
+
+set smartindent
+
+" Set tab spaces
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+" Set virtualedit up
+set virtualedit=all
+
+" Get that filetype stuff happening
+filetype plugin indent on
+syntax on
+
+" Always show the status line
+set laststatus=2
+
+" Syntax highlight debugging tools
+map <F7> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+
+colorscheme Tomorrow
+set background=light

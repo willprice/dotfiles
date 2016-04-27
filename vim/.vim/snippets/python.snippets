@@ -1,0 +1,34 @@
+snippet rosalind
+	#!/usr/bin/env python2
+	import unittest
+
+
+	def ${1:function}:
+		${5:function_body}
+
+
+	class Test${2:name}(unittest.TestCase):
+		def test${3:first_test_name}(self):
+			${4:test_body}
+
+	if __name__ == "__main__":
+		unittest.main()
+
+snippet tests
+	#!/usr/bin/env python
+	import unittest
+
+
+	class Test${1:name}(unittest.TestCase):
+		def test${2:name}(self):
+			${3:test_contents}
+		
+
+	if __name__ == '__main__':
+		unittest.main()
+snippet ae
+	self.assertEqual(${1:expected}, ${2:actual})
+
+snippet main
+	if __name__ == '__main__':
+		${1}
