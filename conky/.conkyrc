@@ -1,0 +1,20 @@
+# Enable transparency
+own_window_transparent yes
+# Fork to background
+background yes
+# Disallow management by window manager
+own_window_type override
+draw_outline yes
+text_buffer_size 65536
+use_xft yes
+xftfont Terminus:size=12
+default_color white
+default_outline_color grey
+default_shade_color white
+double_buffer yes
+gap_x 10
+gap_y 10
+
+TEXT
+Here's some text
+${exec t}
