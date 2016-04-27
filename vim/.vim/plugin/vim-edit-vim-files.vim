@@ -1,4 +1,4 @@
 " edit vim
-nnoremap <leader>ev :vsplit ~/.vimrc<CR>
+nnoremap <leader>ev :vsplit ~/.vim/vimrc<CR>
 " source vim
-nnoremap <leader>sv :source ~/.vimrc<CR>
+nnoremap <leader>sv :source ~/.vim/vimrc<CR>
