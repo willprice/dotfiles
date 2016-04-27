@@ -1,0 +1,80 @@
+# vim: set ft=bash
+
+#git shortcuts
+alias g='git'
+alias gs='git status'
+alias gb='git branch'
+alias gd='git diff'
+alias gc='git checkout'
+alias gsh='git show'
+alias gf='git show –name-only'
+alias gcon='cat .git/config'
+alias master='git checkout master'
+alias chekcout=checkout
+alias cherry='git cherry-pick'
+alias unstage='git reset HEAD'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset" --abbrev-commit --date=relative'
+
+alias pacman='sudo pacsrv --color always'
+alias get='pacman -S'
+alias mkdir='mkdir -p'
+alias ls='ls --color=auto'
+alias la='ls -al'
+alias grep='grep --color=auto'
+alias rvim='sudo vim'
+alias ll='ls -l'
+alias reboot="sudo reboot"
+alias poweroff="sudo poweroff"
+alias halt="sudo halt"
+alias rmdirforce='rmdir --ignore-fail-on-non-empty'
+alias rm='trash'
+alias remtransmission='transmission-remote-gtk'
+alias gtypist='gtypist -w'
+alias mp3='ls *.mp3'
+alias gcal='gcalcli'
+alias gcala='gcalcli quick'
+alias gcalm='gcalcli calm'
+alias gcalw='gcalcli calw'
+alias grep='grep --color=auto'
+alias markdown='pandoc -f markdown -t html'
+alias vi='vim'
+alias pip2='sudo pip2'
+alias killofflineimap="ps -A | grep offlineimap | awk '{print $1}' | xargs kill -9"
+alias deploy='git add -u . && git commit -m "regenerate site" && git push'
+function jason(){ teamviewer7 & xrandr --output DVI-I-2 --scale 0.71x0.71; }
+alias pc='processing-run'
+alias openstm='openocd -f /usr/share/openocd/scripts/board/stm32f4discovery.cfg'
+alias urxvt-large='urxvt -fn xft:Terminus:pixelsize=20'
+alias py='ipython2'
+alias ptags=/usr/lib/python2.7/Tools/scripts/ptags.py
+alias money='ledger bal Current'
+alias scharge='charge 60 80'
+alias nosetests='nosetests3'
+
+# One chars
+alias s='sudo'
+alias p='sudo pacsrv --color always'
+alias e='vim'
+alias l='ls --color=always'
+alias redwm='cd ~/src/dwm-git/; makepkg -efi; killall X'
+alias fixwifi='sudo rmmod iwldvm iwlwifi; sleep 0.5; sudo modprobe iwlwifi'
+j() {
+  if [ $# -lt 1 ]; then
+    jekyll serve --watch
+  else
+    jekyll "$@"
+  fi
+}
+alias topcoder='javaws http://www.topcoder.com/contest/arena/ContestAppletProd.jnlp'
+alias nt='nosetests3'
+alias ntrayer='trayer --SetDockType true --SetPartialStrut true --edge top --widthtype percent --align right --width 15 --height 18 --tint 0x1A1A1A --transparent true'
+alias dmesg='dmesg -L'
+alias fitnesse='java -jar ~/code/java/fitnesse/fitnesse-standalone.jar -p 8080'
+alias a-con='go-mtpfs ~/phone &'
+alias a-discon='fusermount -u ~/phone'
+alias c='chmod +x'
+alias nosetests='nosetests-2.7'
+alias upgrade='sudo apt-get update && sudo apt-get upgrade'
+alias info='pinfo'
+alias phonehome='ssh -p 9455 pi@willprice94.ddns.net'
+alias fuck='thefuck'
