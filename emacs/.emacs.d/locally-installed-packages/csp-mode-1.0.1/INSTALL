@@ -1,0 +1,20 @@
+Installation of csp-mode requires the following steps:
+
+1. Edit `Makefile' and adapt the pathnames to your systems'
+   requirements.  Also pay attention on the variables that define some
+   program names (f.e. your Emacs flavour `emacs' or `xemacs').
+
+2. Run `make install' to byte-compile csp-mode for your Emacs flavour,
+   install the byte-compiled files and the info documentation to the
+   appropriate directories specified in the file `Makefile'.
+
+   See `Makefile' for more detailled installation options (DVI or
+   PostScript versions of the manual).
+
+3. Add the following to your ~/.emacs:
+
+   (require 'csp-mode)
+
+4. Run your Emacs flavour and load a CSP specification.  You're
+   supposed to look at a colorful CSP specification now.  
+

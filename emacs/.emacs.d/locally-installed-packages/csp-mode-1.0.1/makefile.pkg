@@ -1,0 +1,2 @@
+PACKAGE = csp-mode
+ELFILES = csp-mode.el

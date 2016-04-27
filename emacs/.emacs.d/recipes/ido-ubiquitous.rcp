@@ -1,0 +1,6 @@
+(:name ido-ubiquitous
+       :description "Ido everywhere!"
+       :type github
+       :pkgname "technomancy/ido-ubiquitous"
+       :features ido-ubiquitous)
+       

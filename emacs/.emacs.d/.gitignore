@@ -1,0 +1,8 @@
+/el-get
+/backup
+\#*
+*\~
+.ido.last
+.smex-items
+/elpa
+*.elc

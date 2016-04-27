@@ -1,0 +1,6 @@
+(:name racket-mode
+       :description "Racket-mode"
+       :type github
+       :pkgname "greghendershott/racket-mode"
+       :features racket-mode)
+       

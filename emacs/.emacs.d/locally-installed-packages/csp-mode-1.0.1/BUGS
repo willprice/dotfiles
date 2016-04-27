@@ -1,0 +1,2 @@
+* Block comments are not recognized correctly if there is a normal
+  comment starting with `--' in it.
