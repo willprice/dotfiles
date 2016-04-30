@@ -5,11 +5,11 @@ set encoding=utf-8
 
 
 " Set leader
-let mapleader=','
+let mapleader=","
 
 " #### BUNDLES ####
 call plug#begin('~/.vim/bundle')
-for file in split(globpath(expand('~/.vim/config'), '*\.vim'), '\n')
+for file in split(globpath(expand('~/.vim/plug-config'), '*\.vim'), '\n')
   exe 'source' file
 endfor
 call plug#end()

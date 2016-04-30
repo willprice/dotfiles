@@ -13,13 +13,14 @@ Plug 'scrooloose/syntastic'
 " HASKELL
 " ##########################
 " Haskell hdevtools plugin (aids syntastic)
- Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }
+Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }
 " vim2hs, Haskell syntax among other things
- Plug 'dag/vim2hs', { 'for': 'haskell' }
+Plug 'dag/vim2hs', { 'for': 'haskell' }
 " Haskell completion
- Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+Plug 'Shougo/neocomplete.vim'
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 " Haskell mode
- Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
+Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
 " Haskell code formatter
 " Plug 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
 
