@@ -7,13 +7,19 @@ import XMonad.Config (defaultConfig)
 import XMonad.Actions.SpawnOn
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
+import XMonad.Util.NamedScratchpad
 import qualified XMonad.StackSet as W
 
 import Control.Monad
 
+import ScratchPads
+
 getManageHook sessionType = screenRulesManageHook
            <+> manageDocks
+           <+> scratchPadsManageHook
            <+> XMonad.manageHook defaultConfig
+
+scratchPadsManageHook = namedScratchpadManageHook scratchPads
 
 screenRulesManageHook = composeAll . concat $
                 [ [isFullscreen --> doFullFloat]

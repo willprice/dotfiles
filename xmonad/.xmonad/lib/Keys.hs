@@ -4,8 +4,10 @@ import XMonad
 import XMonad.Hooks.ManageDocks
 import Graphics.X11.ExtraTypes.XF86
 import qualified Data.Map as M
+import XMonad.Util.NamedScratchpad
 
 import Commands
+import ScratchPads
 import qualified SessionType
 
 modMask = mod4Mask
@@ -28,11 +30,12 @@ coreKeys XConfig {XMonad.modMask = modm} =
         , ((modm .|. shiftMask, xK_b), spawn browser)
         , ((modm .|. shiftMask, xK_u), spawn fileBrowser)
         , ((modm .|. shiftMask, xK_v), spawn disableScreenSaver)
+        , ((modm .|. shiftMask, xK_d), namedScratchpadAction scratchPads "zeal")
         , ((modm, xK_v), spawn blankScreen)
         , ((modm .|. shiftMask, xK_minus), spawn "/home/will/.bin/pulsevolcontrol down")
         , ((modm .|. shiftMask, xK_equal), spawn "/home/will/.bin/pulsevolcontrol up")
         , ((0, xK_Print), spawn screenShot)
-        , ((modm .|. shiftMask, xK_m), spawn $ mailClient)
+        , ((modm .|. shiftMask, xK_m), spawn mailClient)
         ]
 
 mediaKeys XConfig {XMonad.modMask = modm} =
