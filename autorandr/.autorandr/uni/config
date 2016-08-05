@@ -1,21 +1,26 @@
-output LVDS1
-off
 output DP1
-off
-output DP2
-auto
-primary
-output DP3
 off
 output HDMI1
 off
 output HDMI2
 off
 output HDMI3
-auto
-rotate left
-right-of DP2
+off
 output VGA1
 off
 output VIRTUAL1
 off
+output LVDS1
+off
+output DP2
+gamma 1.0:0.714:0.526
+mode 1920x1200
+pos 2560x0
+rate 59.95
+rotate left
+output DP3
+gamma 1.0:0.714:0.526
+mode 2560x1440
+pos 0x349
+primary
+rate 59.95
