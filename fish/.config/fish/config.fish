@@ -6,3 +6,5 @@ set -gx OMF_PATH "/home/will/.local/share/omf"
 
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
+
+set -x PATH $HOME/.local/bin $PATH
