@@ -1,3 +1,9 @@
+include "~/.lirc/banshee"
+include "~/.lirc/mplayer"
+include "~/.lirc/totem"
+include "~/.lirc/vlc"
+include "~/.lirc/xine"
+
 begin
   prog = irexec
   button = KEY_MUTE
@@ -7,14 +13,14 @@ end
 
 begin
   prog = irexec
-  button = KEY_VOLUMEUP
+  button = KEY_KPPLUS
   config = /home/will/.bin/pulsevolcontrol up
   repeat = 1
 end
 
 begin
   prog = irexec
-  button = KEY_VOLUMEDOWN
+  button = KEY_KPMINUS
   config = /home/will/.bin/pulsevolcontrol down
   repeat = 1
 end
