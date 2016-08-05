@@ -3,12 +3,12 @@ alias g git
 
 # Editors
 alias ect "emacsclient --tty"
-function ecg 
+function ecg
   eval emacsclient -c $argv &
 end
 
 # Tools
-alias t "todo.sh"
+alias t "task"
 
 # General
 alias pbcopy 'xclip -selection clipboard'
