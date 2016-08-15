@@ -1,3 +1,14 @@
 [user]
 	name = Will Price
 	email = will.price94@gmail.com
+[alias]
+  a = add
+  c = commit
+  d = diff
+  dc = diff --cached
+  l = log --oneline --graph
+  rd = reset --hard
+  ri = reset --mixed
+  s = status
+  sv = stash
+  p = push
