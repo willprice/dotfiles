@@ -30,6 +30,7 @@ import XMonad.Config.Desktop
 import XMonad.Config.Gnome
 import XMonad.Config.Kde
 import XMonad.Config.Xfce
+import System.Taffybar.Hooks.PagerHints (pagerHints)
 
 import Colours
 import Commands
@@ -54,7 +55,9 @@ main = do
              sessionType <- getSessionType
              let baseConfig = getSessionConfig sessionType
              xmproc <- spawnPipe "xmobar /home/will/.xmobarrc"
-             xmonad $ ewmh $ baseConfig { manageHook = getManageHook sessionType
+             xmonad $ ewmh
+                    $ pagerHints
+                    $ baseConfig { manageHook = getManageHook sessionType
                                  , startupHook = getStartupHook sessionType
                                  , layoutHook = getLayoutHook sessionType
                                  , handleEventHook = fullscreenEventHook
