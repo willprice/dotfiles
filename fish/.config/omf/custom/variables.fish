@@ -1,5 +1,5 @@
 # private variables
-set editor            vim
+set --local editor            vim
 
 # public variables
 set --export EDITOR        "$editor"
