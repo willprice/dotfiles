@@ -2,7 +2,8 @@
 URxvt*termName:             rxvt-unicode-256color
 URxvt.perl-ext-common:      default,clipboard,matcher,font-size
 URxvt.scrollBar:            false
-URxvt.font:                 xft:Terminess Powerline:pixelsize=14:hinting=true:autohint=true
+URxvt.font:                 xft:Terminus:pixelsize=14,\
+                            xft:Terminess Powerline:pixelsize=14:hinting=true:autohint=true
 URxvt.url-launcher:         chromium
 URxvt.underlineURLs:        true
 URxvt.clipboard.autocopy:   true
