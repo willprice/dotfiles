@@ -5,7 +5,7 @@ set --local editor            vim
 set --export EDITOR        "$editor"
 set --export VISUAL        "$editor"
 set --export BROWSER       chromium
-set --export TERMINAL      terminator
+set --export TERMINAL      urxvt
 set --export GOPATH        "$HOME/code/go"
 set --export ANSIBLE_HOME  ~/src/ansible
 set --global Z_SCRIPT_PATH ~/src/z/z.sh
