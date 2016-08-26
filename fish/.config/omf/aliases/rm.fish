@@ -1,0 +1,1 @@
+alias rmi 'rm -i'
