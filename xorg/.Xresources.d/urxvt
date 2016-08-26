@@ -1,7 +1,23 @@
+! In built settings
 URxvt*termName:             rxvt-unicode-256color
-URxvt.perl-ext-common:      default,clipboard,matcher
+URxvt.perl-ext-common:      default,clipboard,matcher,font-size
 URxvt.scrollBar:            false
 URxvt.font:                 xft:Terminess Powerline:pixelsize=14:hinting=true:autohint=true
 URxvt.url-launcher:         chromium
 URxvt.underlineURLs:        true
 URxvt.clipboard.autocopy:   true
+URxvt.saveLines:            16384
+URxvt.secondaryScroll:      true
+
+! Extension Settings: Font-size
+URxvt.font-size.step: 2
+
+! Keybindings
+#define KEYSYM_PLUS 0x2b
+#define KEYSYM_MINUS 0x2d
+#define KEYSYM_EQUALS 0x3d
+
+URxvt.keysym.C-0:               font-size:reset
+URxvt.keysym.C-KEYSYM_PLUS:     font-size:increase
+URxvt.keysym.C-KEYSYM_EQUALS:   font-size:increase
+URxvt.keysym.C-KEYSYM_MINUS:    font-size:decrease
