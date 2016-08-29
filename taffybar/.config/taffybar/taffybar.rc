@@ -1,14 +1,57 @@
+# Gtk Theming in 5 minutes:
+# -------------------------
+#
+# Categories:
+# -----------
+# fg: Text color on buttons (also button borders in some engines)
+# bg: Background color of windows and buttons
+# text: Text color for text input widgets and lists
+# base: Baseground color of text widgets and lists
+#
+#
+# States:
+# -------
+# NORMAL: Normal color
+# PRELIGHT: Mouse over effects
+# ACTIVE: Whilst mouse is pressed
+# SELECTED: When text is selected
+# INSENSITIVE: For widgets that cannot be used
+#
+# Applying styles to objects:
+# ---------------------------
+# There are three methods of matching objects for styling:
+# - `class`
+# - `widget_class`
+# - `widget`
+#
+# `class` matches based on widget class hierarchy
+#
+# You can use `?` to match a single character, or `*` to match an
+# arbitrary number of characters.
+#
+# Further Information:
+# --------------------
+# [Gnome Art: Gtk theming tutorial](https://wiki.gnome.org/Attic/GnomeArt/Tutorials/GtkThemes#GTK_Theming_Tutorial)
+
+
+include "solarized.rc"
+
 style "default" {
-    bg[NORMAL]   = "#002b36"
-    fg[NORMAL]   = "#586e75"
-    text[NORMAL] = "#ffffff"
+    font_name = "Terminus 10"
 }
 
-style "notification-button" = "default" {
-    text[NORMAL] = "#FF0000"
-    fg[NORMAL]   = "#FF0000"
+style "dark" = "default" {
+    base[NORMAL] = @base03
+    bg[NORMAL]   = @base03
+    fg[NORMAL]   = @base0
+    text[NORMAL] = @base0
 }
 
-widget "Taffybar*" style "default"
-widget "*NotificationCloseButton" style "notification-button"
-gtk-font-name="Roboto Regular 11"
+style "light"  = "default" {
+    base[NORMAL] = @base3
+    bg[NORMAL]   = @base3
+    fg[NORMAL]   = @base00
+    text[NORMAL] = @base00
+}
+
+widget "Taffybar*" style "light"

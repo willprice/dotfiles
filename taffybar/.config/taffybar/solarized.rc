@@ -1,0 +1,17 @@
+# Solarized colors
+gtk_color_scheme = "base03:  #002b36" # (dark)  Background
+gtk_color_scheme = "base02:  #073642" # (dark)  Background highlights
+gtk_color_scheme = "base01:  #586e75" # (dark)  Comments / Secondary content | (light) Optional emphasized content
+gtk_color_scheme = "base00:  #657b83" # (light) Body text / Default code / Primary content
+gtk_color_scheme = "base0:   #839496" # (dark)  Body text / Default code / Primary content
+gtk_color_scheme = "base1:   #93a1a1" # (dark)  Optional emphasized content | (light) Comments / Secondary content
+gtk_color_scheme = "base2:   #eee8d5" # (light) Background highlights
+gtk_color_scheme = "base3:   #fdf6e3" # (light) Background
+gtk_color_scheme = "yellow:  #b58900"
+gtk_color_scheme = "orange:  #cb4b16"
+gtk_color_scheme = "red:     #dc322f"
+gtk_color_scheme = "magenta: #d33682"
+gtk_color_scheme = "violet:  #6c71c4"
+gtk_color_scheme = "blue:    #268bd2"
+gtk_color_scheme = "cyan:    #2aa198"
+gtk_color_scheme = "green:   #859900"
