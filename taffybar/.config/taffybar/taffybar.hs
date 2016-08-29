@@ -84,5 +84,5 @@ main = do
       clock       = textClockNew Nothing  ("<span fgcolor='" ++ (toHexString Yellow) ++ "'>%a %b %_d %H:%M</span>") 1
 
   defaultTaffybar defaultTaffybarConfig { startWidgets = [ pager, note ]
-                                        , endWidgets = reverse [ mpris2, wifi, fs, battery, disk, cpu, mem, tray, clock ]
+                                        , endWidgets = reverse [ mpris2, wifi, battery, disk, cpu, mem, fs, tray, clock ]
                                         }
