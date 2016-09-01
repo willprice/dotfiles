@@ -98,6 +98,8 @@ Plug 'willprice/vim-gas', { 'for': 'gas' }
 Plug 'vim-scripts/scons.vim', { 'for': 'scons' }
 " Ansible YAML
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
+" SaltStack
+Plug 'saltstack/salt-vim', { 'for': 'salt' }
 " Dockerfiles
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 " SQL
