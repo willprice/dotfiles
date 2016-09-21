@@ -5,5 +5,5 @@ package mvn
 package nvm
 package rvm
 package vcs
-package z
+package virtualfish
 theme bobthefish
