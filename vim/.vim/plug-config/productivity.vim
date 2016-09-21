@@ -50,6 +50,11 @@ Plug 'Shougo/unite.vim'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
+
+Plug 'vim-scripts/CountJump' " Dependency of ConflictMotions
+" SCM merge resolution helper
+Plug 'vim-scripts/ConflictMotions'
+
 " Shows additions and deletions for git in column
 Plug 'mhinz/vim-signify'
 
