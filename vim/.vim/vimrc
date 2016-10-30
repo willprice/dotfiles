@@ -96,6 +96,9 @@ set shiftwidth=4
 " Set virtualedit up
 set virtualedit=all
 
+" Don't leave byte-order-marks at the start of files, people don't
+" like them
+set nobomb
 " Get that filetype stuff happening
 filetype plugin indent on
 syntax on
