@@ -116,17 +116,17 @@ Plug 'adimit/prolog.vim', { 'for': 'prolog' }
 Plug 'jrozner/vim-antlr'
 " ANTLR 3 plguin
 Plug 'vim-scripts/antlr3.vim'
-
+" Pentadactyl
+Plug 'dogrover/vim-pentadactyl'
 
 " ##########################
 " MARKUP LANGUAGES
 " ##########################
-" Markdown folding
-Plug 'godlygeek/tabular' " Dep of vim-markdown
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 " Livedown, automatically refresh markdown generated HTML
 Plug 'shime/vim-livedown', { 'for': 'markdown' }
 " Markdown
-"Plug 'tpope/vim-markdown', {'dir': 'tpope-vim-markdown'}
+Plug 'godlygeek/tabular', { 'for': 'markdown' }
+Plug 'plasticboy/vim-markdown'
 " ASCIIDoc
 Plug 'dagwieers/asciidoc-vim', { 'for': 'asciidoc' }
+Plug 'blindFS/vim-taskwarrior'
