@@ -91,6 +91,8 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 " ### ELECTRONICS ###
 " VHDL
 Plug 'vim-scripts/VIP', { 'for': 'vhdl' }
+" Verilog
+Plug 'vhda/verilog_systemverilog.vim', { 'for': 'verilog' }
 " GAS assembly
 Plug 'willprice/vim-gas', { 'for': 'gas' }
 " ### OPS ###
