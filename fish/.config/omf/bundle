@@ -1,4 +1,5 @@
 package ansible
+package bundler
 package foreign-env
 package git-flow
 package mvn
