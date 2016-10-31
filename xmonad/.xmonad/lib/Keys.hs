@@ -26,6 +26,7 @@ coreKeys XConfig {XMonad.modMask = modm} =
         , ((modm, xK_b), sendMessage ToggleStruts)
         , ((modm, xK_F10), spawn "systemctl suspend")
         , ((modm, xK_0), spawn "/home/will/.bin/color")
+        , ((modm .|. shiftMask, xK_q), spawn "mate-session-save --force-logout")
         , ((modm .|. shiftMask, xK_p), spawn graphicalEditor)
         , ((modm .|. shiftMask, xK_b), spawn browser)
         , ((modm .|. shiftMask, xK_u), spawn fileBrowser)
