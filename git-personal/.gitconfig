@@ -3,7 +3,10 @@
 	email = will.price94@gmail.com
 [alias]
   a = add
+  ai = add -i
   c = commit
+  ca = commit --amend
+  co = checkout
   d = diff
   dc = diff --cached
   l = log --oneline --graph
