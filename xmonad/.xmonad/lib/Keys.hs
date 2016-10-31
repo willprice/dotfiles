@@ -17,7 +17,6 @@ getKeys sessionType = customKeys sessionType <+> keys defaultConfig
 
 customKeys sessionType conf = M.fromList $ concat [ coreKeys conf
                                                   , mediaKeys conf
-                                                  , xf86MediaKeys sessionType conf
                                                   ]
 
 coreKeys XConfig {XMonad.modMask = modm} =
