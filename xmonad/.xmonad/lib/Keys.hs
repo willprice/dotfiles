@@ -12,7 +12,7 @@ import qualified SessionType
 
 modMask = mod4Mask
 
-getKeys sessionType = keys defaultConfig <+> customKeys sessionType
+getKeys sessionType = customKeys sessionType <+> keys defaultConfig
 
 
 customKeys sessionType conf = M.fromList $ concat [ coreKeys conf
