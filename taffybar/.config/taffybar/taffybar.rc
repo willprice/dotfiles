@@ -42,7 +42,9 @@ style "default" {
 
 style "dark" = "default" {
     base[NORMAL] = @base03
+    base[INSENSITIVE]   = @base03
     bg[NORMAL]   = @base03
+    bg[INSENSITIVE]   = @base03
     fg[NORMAL]   = @base0
     text[NORMAL] = @base0
 }
@@ -54,4 +56,10 @@ style "light"  = "default" {
     text[NORMAL] = @base00
 }
 
-widget "Taffybar*" style "light"
+widget "Taffybar*"      style "light"
+widget "Taffybar*Tray*"      style "dark"
+widget "Taffybar*tray*"      style "dark"
+widget "Taffybar*egg*"      style "dark"
+widget "Taffybar*Egg*"      style "dark"
+class "*tray*"      style "dark"
+class "*Tray*"      style "dark"
