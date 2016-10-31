@@ -23,3 +23,5 @@ blankScreen        = "sh -c 'sleep 1; xset dpms force standby'"
 
 mediaplayerNextSong = "mpc next"
 mediaplayerPrevSong = "mpc prev"
+
+lockscreen = "slock"

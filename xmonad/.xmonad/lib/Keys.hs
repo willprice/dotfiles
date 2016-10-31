@@ -29,6 +29,7 @@ coreKeys XConfig {XMonad.modMask = modm} =
         , ((modm .|. shiftMask, xK_q), spawn "mate-session-save --force-logout")
         , ((modm .|. shiftMask, xK_p), spawn graphicalEditor)
         , ((modm .|. shiftMask, xK_b), spawn browser)
+        , ((modm .|. shiftMask .|. controlMask, xK_l), spawn lockscreen)
         , ((modm .|. shiftMask, xK_u), spawn fileBrowser)
         , ((modm .|. shiftMask, xK_v), spawn disableScreenSaver)
         , ((modm .|. shiftMask, xK_d), namedScratchpadAction scratchPads "zeal")
