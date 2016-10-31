@@ -6,6 +6,3 @@ for dir in $dirs_to_source
         . "$f"
     end
 end
-alias mdv="python2 $HOME/src/terminal_markdown_viewer/mdv.py"
-alias f="fuck"
-eval (thefuck --alias | tr '\n' ';')
