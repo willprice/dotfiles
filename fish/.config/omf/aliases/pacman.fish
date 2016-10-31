@@ -1,11 +1,12 @@
-alias pacman "sudo pacman"
+alias pacman "sudo pacman --color=auto"
 alias psyu "pacman -Syu"
 
 function p
     set has_options 0
+    set flags "--color=auto"
 
     if [ (count $argv) -eq 0 ]
-        sudo pacman -Syu
+        sudo pacman $flags -Syu
         return
     end
 
@@ -16,9 +17,9 @@ function p
     end
 
     if [ $has_options -eq 1 ]
-        sudo pacman $argv
+        sudo pacman $flags $argv
     else
-        sudo pacman -S $argv
+        sudo pacman $flags -S $argv
     end
 end
 
