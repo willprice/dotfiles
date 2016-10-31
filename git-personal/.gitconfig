@@ -15,3 +15,7 @@
   s = status
   sv = stash
   p = push
+[color "diff"]
+	old = red strike
+	new = green
+	meta = cyan reverse
