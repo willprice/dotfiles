@@ -1,5 +1,7 @@
 module Commands where
 
+import Data.List (intersperse)
+
 type Command = String
 
 terminal = "urxvt -e fish"
@@ -7,12 +9,13 @@ graphicalEditor = "emacsclient -c"
 browser = "chromium"
 fileBrowser = "nautilus"
 mailClient = "nylas"
-dmenu = concat [ "dmenu_run -b -fn", font
-               , "-p",  prompt
-               , "-nb", backgroundColor
-               , "-nf", foregroundColor
-               ]
-    where font            = "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1"
+dmenu = concat $ intersperse " "
+    [ "dmenu_run -b -fn", font
+    , "-p",  prompt
+    , "-nb", backgroundColor
+    , "-nf", foregroundColor
+    ]
+    where font            = "Terminus"
           prompt          = "Command"
           backgroundColor = "grey10"
           foregroundColor = "snow1"
