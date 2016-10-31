@@ -7,3 +7,4 @@ package rvm
 package vcs
 package virtualfish
 theme bobthefish
+theme shellder
