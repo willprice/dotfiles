@@ -6,7 +6,7 @@ type Command = String
 
 terminal = "urxvt -e fish"
 graphicalEditor = "emacsclient -c"
-browser = "chromium"
+browser = "google-chrome-stable"
 fileBrowser = "nautilus"
 mailClient = "nylas"
 dmenu = concat $ intersperse " "
