@@ -26,3 +26,4 @@ function color_maven() {
 }
 
 alias mvn=color_maven
+alias g=git
