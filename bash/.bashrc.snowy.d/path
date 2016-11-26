@@ -1,0 +1,2 @@
+include_in_path "$HOME/usr/bin"
+include_in_path /usr/local/modelsim/modeltech/bin
