@@ -2,28 +2,15 @@
 " GENERAL
 " ##########################
 " Generic Hex colors
-Plug 'ap/vim-css-color', { 'for': 'haskell' }
-" Completion for loads of languages
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+Plug 'ap/vim-css-color'
 " Syntax checking for most languages (linter)
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 
 
 " ##########################
 " HASKELL
 " ##########################
-" Haskell hdevtools plugin (aids syntastic)
-Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }
-" vim2hs, Haskell syntax among other things
-Plug 'dag/vim2hs', { 'for': 'haskell' }
-" Haskell completion
-Plug 'Shougo/neocomplete.vim'
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
-" Haskell mode
-Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
-" Haskell code formatter
-" Plug 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
-
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 " ##########################
 " WEB+JS
@@ -87,6 +74,8 @@ Plug 'andreimaxim/vim-io', { 'for': 'io' }
 Plug 'zah/nimrod.vim', { 'for': 'nim' }
 " Go
 Plug 'fatih/vim-go', { 'for': 'go' }
+" Matlab
+Plug 'vim-scripts/MatlabFilesEdition'
 
 " ### ELECTRONICS ###
 " VHDL
@@ -129,6 +118,8 @@ Plug 'shime/vim-livedown', { 'for': 'markdown' }
 " Markdown
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown'
+" Pandoc
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 " ASCIIDoc
 Plug 'dagwieers/asciidoc-vim', { 'for': 'asciidoc' }
-Plug 'blindFS/vim-taskwarrior'

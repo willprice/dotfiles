@@ -56,11 +56,18 @@ Plug 'vim-scripts/CountJump' " Dependency of ConflictMotions
 Plug 'vim-scripts/ConflictMotions'
 
 " Shows additions and deletions for git in column
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 
 " Editorconfig support: reads a .editorconfig file to keep editor configs
 " consistent across multiple dev machines
 Plug 'editorconfig/editorconfig-vim'
+
+" Man pages in vim
+Plug 'vim-utils/vim-man'
+
+" Grep through project
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'mhinz/vim-grepper'
 
 " TMUX to vim communication
 Plug 'jpalardy/vim-slime'
@@ -98,6 +105,11 @@ Plug 'tmhedberg/matchit'
 " Automatically end blocks
 Plug 'tpope/vim-endwise'
 
+" Edit files from remote locations
+Plug 'zenbro/mirror.vim'
+
+" ctags support
+Plug 'c0r73x/neotags.nvim'
 " ##########################
 " TOOLBARS
 " ##########################

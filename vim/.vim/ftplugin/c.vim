@@ -1,3 +1,3 @@
 setlocal cindent
-setlocal tabstop=8
-setlocal shiftwidth=8
+setlocal tabstop=2
+setlocal shiftwidth=2

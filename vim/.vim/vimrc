@@ -112,5 +112,5 @@ map <F7> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 
-colorscheme Tomorrow
+colorscheme solarized
 set background=light
