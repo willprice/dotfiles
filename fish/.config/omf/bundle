@@ -7,5 +7,6 @@ package nvm
 package rvm
 package vcs
 package virtualfish
+theme agnoster
 theme bobthefish
 theme shellder
