@@ -1,4 +1,4 @@
-export BASH_IT="/home/will/.bash-it"
+export BASH_IT="$HOME/.bash-it"
 # location /.bash_it/themes/
 export BASH_IT_THEME='clean'
 
