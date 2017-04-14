@@ -4,10 +4,10 @@ import Data.List (intersperse)
 
 type Command = String
 
-terminal = "urxvt -e fish"
+terminal = "konsole -e fish"
 graphicalEditor = "emacsclient -c"
 browser = "google-chrome-stable"
-fileBrowser = "nautilus"
+fileBrowser = "thunar"
 mailClient = "nylas"
 dmenu = concat $ intersperse " "
     [ "dmenu_run -b -fn", font
@@ -37,3 +37,5 @@ mediaplayerNextSong = "mpc next"
 mediaplayerPrevSong = "mpc prev"
 
 lockscreen = "slock"
+
+documentationViewer = "zeal"
