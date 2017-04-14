@@ -16,6 +16,6 @@
   sv = stash
   p = push
 [color "diff"]
-	old = red strike
+	old = red
 	new = green
-	meta = cyan reverse
+	meta = cyan
