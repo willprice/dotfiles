@@ -1,3 +1,0 @@
-alias pacman='sudo pacman --color=auto'
-alias aura='sudo aura'
-alias cower='cower --color=auto'

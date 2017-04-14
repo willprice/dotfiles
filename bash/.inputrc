@@ -1,17 +1,7 @@
-# Enable 8bit input
-set meta-flag on
-set input-meta on
-
-# Turns off 8th bit stripping
-set convert-meta off
-
-# Keep the 8th bit for display
-set output-meta on
-
 # Will display all alternatives for completion after one tab keypress
 set show-all-if-ambiguous On
-
+set completion-ignore-case on
+# \e = Alt key
 # Use arrow keys in partial commands to go through history
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-set completion-ignore-case on

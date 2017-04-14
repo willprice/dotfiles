@@ -1,0 +1,12 @@
+export BASH_IT="/home/will/.bash-it"
+# location /.bash_it/themes/
+export BASH_IT_THEME='clean'
+
+# (Advanced): Uncomment this to make Bash-it reload itself automatically
+# after enabling or disabling aliases, plugins, and completions.
+# export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
+
+# Load Bash It
+source $BASH_IT/bash_it.sh
+
+# vim: set ft=sh:

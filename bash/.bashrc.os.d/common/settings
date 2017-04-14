@@ -1,5 +1,0 @@
-#!/bin/bash
-# vim: set ft=sh:
-
-#Remove software flow control
-stty -ixon

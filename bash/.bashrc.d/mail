@@ -1,0 +1,4 @@
+# Don't check mail when opening terminal.
+unset MAILCHECK
+
+# vim: set ft=sh:

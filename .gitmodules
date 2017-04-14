@@ -1,3 +1,6 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "bash/.bash-it"]
+	path = bash/.bash-it
+	url = https://github.com/Bash-it/bash-it.git

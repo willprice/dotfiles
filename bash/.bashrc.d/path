@@ -1,0 +1,14 @@
+# vim: set ft=sh:
+
+# Later directories take precedence
+possible_dirs=("/opt/android-sdk/platform-tools" \
+               "$HOME/.cabal/bin" \
+               "$HOME/.bin" \
+               "$HOME/bin" \
+               "$HOME/.local/bin" \
+               "$HOME/usr/bin" \
+               )
+
+for dir in ${possible_dirs[*]}; do
+    add_to_path "$dir"
+done
