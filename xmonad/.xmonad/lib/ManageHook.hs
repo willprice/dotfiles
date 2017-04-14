@@ -41,6 +41,7 @@ windowClassesToFloat = ["xmessage"
                        , "insync.py"
                        , "pyqt"
                        , "albert"
+                       , "zeal"
                        ]
 windowClassesToIgnore = [
                         ]

@@ -16,7 +16,7 @@ import XMonad.Util.Run (spawnPipe)
 --
 import XMonad.Hooks.DynamicLog -- for parsing data to xmobar
 import XMonad.Hooks.EwmhDesktops -- Enable EWMH window hints (e.g. fullscreen etc)
--- import XMonad.Hooks.ManageDocks -- for managing xmobar's position
+import XMonad.Hooks.ManageDocks -- for managing xmobar's position
 -- import XMonad.Hooks.ManageHelpers
 -- import XMonad.Hooks.SetWMName
 -- import XMonad.Hooks.UrgencyHook -- Allows xmonad to handle windows demanding attentions
@@ -54,9 +54,11 @@ main :: IO ()
 main = do
              sessionType <- getSessionType
              let baseConfig = getSessionConfig sessionType
-             xmproc <- spawnPipe "xmobar /home/will/.xmobarrc"
-             xmonad $ ewmh
-                    $ pagerHints
+             xmonad $ ewmh        -- EWMH provides EWMH implementation for XMonad
+                    $ pagerHints  -- Adds additional hints
+                                  -- _XMONAD_CURRENT_LAYOUT and _XMONAD_VISIBLE_WORKSPACES
+                                  -- for use by taffybar 
+                    $ docks       -- Creates spaces for docks so windows don't overlay them
                     $ baseConfig { manageHook = getManageHook sessionType
                                  , startupHook = getStartupHook sessionType
                                  , layoutHook = getLayoutHook sessionType
