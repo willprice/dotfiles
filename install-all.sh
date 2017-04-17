@@ -3,7 +3,7 @@
 target_directory="${1:-$HOME}"
 cd $(dirname $(realpath $0))
 
-EXCLUDED_PACKAGES_REGEX=".*\(system\|personal\|x230\).*"
+EXCLUDED_PACKAGES_REGEX=".*\(system\|personal\|x230\|matplotlib\).*"
 
 for package in $(find . -mindepth 1 -maxdepth 1 -type d ! -regex "$EXCLUDED_PACKAGES_REGEX" ! -name '.*'); do
   ./install.sh "$target_directory" "${package##./}"
