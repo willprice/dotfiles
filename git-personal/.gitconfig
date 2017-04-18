@@ -9,7 +9,8 @@
   co = checkout
   d = diff
   dc = diff --cached
-  l = log --oneline --graph
+  l = log --oneline --graph --decorate
+  la = log --oneline --graph --decorate --all
   rd = reset --hard
   ri = reset --mixed
   s = status
