@@ -12,7 +12,7 @@
 # States:
 # -------
 # NORMAL: Normal color
-# PRELIGHT: Mouse over effects
+# PRELIGHT: Mouse over effects (usually set to produce a lighter background)
 # ACTIVE: Whilst mouse is pressed
 # SELECTED: When text is selected
 # INSENSITIVE: For widgets that cannot be used
@@ -40,26 +40,35 @@ style "default" {
     font_name = "Terminus 10"
 }
 
+# Style for taffybar:
+# * `bg[NORMAL]`: bar background
+# * `bg[PRELIGHT]`: window switcher background when clicked (and highlighted
+#   element in window list)
+# * `fg[NORMAL]`: textual content
+# * `fg[PRELIGHT]`: window switcher text when clicked (and highlighted
+#   element in window list)
+
 style "dark" = "default" {
-    base[NORMAL] = @base03
-    base[INSENSITIVE]   = @base03
-    bg[NORMAL]   = @base03
-    bg[INSENSITIVE]   = @base03
-    fg[NORMAL]   = @base0
-    text[NORMAL] = @base0
+    bg[NORMAL]        = @base03
+    # Styles window switcher when clicked
+    bg[PRELIGHT]      = @yellow
+
+    # This highlights text, rather than text[NORMAL]
+    fg[NORMAL]        = @base01
+    fg[PRELIGHT]        = @red
 }
 
 style "light"  = "default" {
-    base[NORMAL] = @base3
-    bg[NORMAL]   = @base3
-    fg[NORMAL]   = @base00
-    text[NORMAL] = @base00
+# NORMAL: Normal color
+# PRELIGHT: Mouse over effects
+# ACTIVE: Whilst mouse is pressed
+# SELECTED: When text is selected
+# INSENSITIVE: For widgets that cannot be used
+    bg[NORMAL]        = @base3
+    bg[PRELIGHT]      = @base1
+
+    fg[NORMAL]        = @base00
+    fg[PRELIGHT]      = @red
 }
 
-widget "Taffybar*"      style "light"
-widget "Taffybar*Tray*"      style "dark"
-widget "Taffybar*tray*"      style "dark"
-widget "Taffybar*egg*"      style "dark"
-widget "Taffybar*Egg*"      style "dark"
-class "*tray*"      style "dark"
-class "*Tray*"      style "dark"
+widget "Taffybar*"                style "light"

@@ -19,6 +19,8 @@ import System.Taffybar.Widgets.PollingGraph
 import System.Information.Memory
 import System.Information.CPU
 
+import Graphics.UI.Gtk as Gtk
+
 import Color
 import Solarized
 
@@ -31,6 +33,14 @@ memCallback = do
 cpuCallback = do
   (userLoad, systemLoad, totalLoad) <- cpuLoad
   return [totalLoad, systemLoad]
+
+makeTray = do
+    tray <- systrayNew
+    container <- Gtk.eventBoxNew
+    Gtk.containerAdd container tray
+    Gtk.widgetSetName container "Taffybar"
+    Gtk.widgetSetName tray "Taffybar"
+    return $ Gtk.toWidget container
 
 main = do
   let memCfg = defaultGraphConfig { graphDataColors = [ toRgba Yellow ]
@@ -50,8 +60,8 @@ main = do
                                         }
           where
               colorFn percentage
-                | percentage < 0.1 = toRgb Red
-                | percentage < 0.8 = toRgb Base0
+                | percentage < 0.4 = toRgb Red
+                | percentage < 0.6 = toRgb Base0
                 | otherwise        = toRgb Green
 
       diskCfg = defaultGraphConfig { graphDataColors = [ toRgba Cyan
