@@ -5,6 +5,7 @@ usage() {
     echo "./install.sh $HOME vim"
 }
 
+which stow || { echo "Stow is not installed"; exit 2; }
 [[ $# -ne 2 ]] && { usage; exit 1; }
 
 target_directory="$1"; shift
