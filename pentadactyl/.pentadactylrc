@@ -1,9 +1,18 @@
 "hg7226
-
 loadplugins '\.(js|penta)$'
-group user
-set cdpath=''
+
+set guioptions=T
+
+" Link hint characters are better as the home row to reduce finger movement
 set hintkeys=asdfjkl;
-set passkeys=inbox.google.com:jke#,gi,mail.google.com:jk<CR>,gi
+
+" Google Inbox shortcuts
+set passkeys=
+set passkeys+=inbox.google.com:c/?iqhtBMzoujknpey][sPaArRf#!m.xX<Return>,<Ctrl>.
+" Hype Machine
+set passkeys+=hypem.com:?njb<Right>pkz<Left><Space>xcvlh/+-
+" Jupyter
+set passkeys+=localhost:Fymr123456kjKabxcvzdslohi0q<Space><Enter><Up><Down>
+
 
 " vim: set ft=pentadactyl:
