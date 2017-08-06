@@ -7,7 +7,7 @@ type Command = String
 terminal = "konsole -e fish"
 graphicalEditor = "emacsclient -c"
 browser = "google-chrome-stable"
-fileBrowser = "thunar"
+fileBrowser = "caja"
 mailClient = "nylas"
 dmenu = concat $ intersperse " "
     [ "dmenu_run -b -fn", font
@@ -24,6 +24,7 @@ rofi = concat $ intersperse " "
    [ "rofi", "-combi-modi", "run,ssh,window"
    , "-matching", "fuzzy", "-threads", "4"
    , "-show", "run"
+   , "-modi", "run,drun"
    , "-terminal", "urxvt"
    , "-font", "'terminus 12'"
    ]

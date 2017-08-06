@@ -52,7 +52,7 @@ coreKeys XConfig {XMonad.modMask = modm} =
 screenKeys XConfig {XMonad.modMask = modm} = 
         [ ((modm .|. mask, key), screenWorkspace scr >>= 
           flip whenJust (windows . action))
-        | (key, scr)     <- zip [xK_w, xK_e, xK_r] [1, 0, 2] -- Screens 1 and 2 are flipped in ordering. - not at the moment they're not
+        | (key, scr)     <- zip [xK_w, xK_e, xK_r] [0, 2, 1] -- Screens 1 and 2 are flipped in ordering. - not at the moment they're not
         , (action, mask) <- [ (W.view, noModMask) , (W.shift, shiftMask)]]
 
 
