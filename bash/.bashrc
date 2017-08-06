@@ -10,3 +10,5 @@ done
 for config in "${BASHRC_D}"/*; do
     [[ -f "$config" ]] && source "$config"
 done
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
