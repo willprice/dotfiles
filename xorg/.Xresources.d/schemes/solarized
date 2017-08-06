@@ -74,42 +74,45 @@
   #define S_base3       S_rebase3
 #endif
 
-*background:            S_base03
-*foreground:            S_base00
-*fading:                40
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
+TERM*background:            S_base03
+TERM*foreground:            S_base00
+TERM*fading:                40
+TERM*fadeColor:             S_base03
+TERM*cursorColor:           S_base1
+TERM*pointerColorBackground:S_base01
+TERM*pointerColorForeground:S_base1
 
 !! black dark/light
-*color0:                S_base02
-*color8:                S_base03
+TERM*color0:                S_base02
+!! Usually color8 -> base03
+!! but with Mocha this produces invisible text so we map to base01
+!! instead so it is readable
+TERM*color8:                S_base01
 
 !! red dark/light
-*color1:                S_red
-*color9:                S_orange
+TERM*color1:                S_red
+TERM*color9:                S_orange
 
 !! green dark/light
-*color2:                S_green
-*color10:               S_base01
+TERM*color2:                S_green
+TERM*color10:               S_base01
 
 !! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
+TERM*color3:                S_yellow
+TERM*color11:               S_base00
 
 !! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
+TERM*color4:                S_blue
+TERM*color12:               S_base0
 
 !! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
+TERM*color5:                S_magenta
+TERM*color13:               S_violet
 
 !! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
+TERM*color6:                S_cyan
+TERM*color14:               S_base1
 
 !! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+TERM*color7:                S_base2
+TERM*color15:               S_base3

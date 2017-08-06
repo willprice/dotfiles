@@ -2,9 +2,10 @@
 URxvt*termName:             rxvt-unicode-256color
 URxvt.perl-ext-common:      default,clipboard,matcher,font-size
 URxvt.scrollBar:            false
-URxvt.font:                 xft:Terminus:pixelsize=14,\
+URxvt.font:                 xft:Bitstream Vera Sans Mono-10,antialias=true\
                             xft:Terminess Powerline:pixelsize=14:hinting=true:autohint=true,\
-                            xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true
+                            xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true,\
+                            -wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
 URxvt.url-launcher:         chromium
 URxvt.underlineURLs:        true
 URxvt.clipboard.autocopy:   true
