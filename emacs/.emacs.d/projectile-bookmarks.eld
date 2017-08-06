@@ -1,1 +1,0 @@
-("~/copy/work/codemanship/book/" "~/.dotfiles/" "~/copy/work/codemanship/book/vcs/calculator/")

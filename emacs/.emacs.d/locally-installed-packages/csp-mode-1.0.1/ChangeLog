@@ -1,9 +1,0 @@
-2001-11-24  Raymond Scholz <rscholz@zonix.de>
-
-	* csp-mode release version 1.0.1
-
-	* Makefile: New file, taken from pcl-cvs by Stefan Monnier.
-
-	* ChangeLog, README, COPYING, INSTALL, NEWS: New files
-	
-	* csp-mode.texi: Make it compile under makeinfo 4.0
