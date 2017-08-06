@@ -1,5 +1,5 @@
 " Setup graphical options
-set guifont=Terminus\ 12
+set guifont=Noto\ Mono\ 10
 set guioptions=aPem
 set background=dark
 set novisualbell

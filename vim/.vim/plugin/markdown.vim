@@ -17,3 +17,6 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 2
 
 nnoremap <F6> :Toc<CR>
+
+set textwidth=80
+set formatoptions+=a " 'a' sets automatic formatting of paragraphs

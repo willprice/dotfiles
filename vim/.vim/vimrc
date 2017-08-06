@@ -96,6 +96,11 @@ set shiftwidth=4
 " Set virtualedit up
 set virtualedit=all
 
+" Prolog takes precedence over perl
+" TODO: Fix doesn't work
+let g:filetype_pl="prolog"
+
+
 " Don't leave byte-order-marks at the start of files, people don't
 " like them
 set nobomb
@@ -112,5 +117,5 @@ map <F7> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 
-colorscheme solarized
-set background=light
+colorscheme base16-solarized-dark
+"let background='light'

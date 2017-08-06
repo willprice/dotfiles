@@ -36,6 +36,8 @@ Plug 'tpope/vim-haml', { 'for': 'haml' }
 Plug 'othree/html5.vim', { 'for': 'html' }
 " Emmet - expand CSS like selectors into HTML
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+" Elm
+Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
 
 
 " ##########################
@@ -66,8 +68,6 @@ Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-" Elm
-Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
 " Io
 Plug 'andreimaxim/vim-io', { 'for': 'io' }
 " Nimrod
