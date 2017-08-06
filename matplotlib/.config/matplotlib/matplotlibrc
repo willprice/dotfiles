@@ -218,7 +218,7 @@ font.serif          : Latin Modern Roman, Computer Modern Roman, DejaVu Serif, B
 #text.color          : black
 
 ### LaTeX customizations. See http://wiki.scipy.org/Cookbook/Matplotlib/UsingTex
-text.usetex         : True    # use latex for all text handling. The following fonts
+#text.usetex         : False    # use latex for all text handling. The following fonts
                               # are supported through the usual rc parameter settings:
                               # new century schoolbook, bookman, times, palatino,
                               # zapf chancery, charter, serif, sans-serif, helvetica,
@@ -520,7 +520,7 @@ text.usetex         : True    # use latex for all text handling. The following f
 #savefig.facecolor   : white    # figure facecolor when saving
 #savefig.edgecolor   : white    # figure edgecolor when saving
 #savefig.format      : png      # png, ps, pdf, svg
-#savefig.bbox        : standard # 'tight' or 'standard'.
+savefig.bbox        : standard # 'tight' or 'standard'.
                                 # 'tight' is incompatible with pipe-based animation
                                 # backends but will workd with temporary file based ones:
                                 # e.g. setting animation.writer to ffmpeg will not work,
