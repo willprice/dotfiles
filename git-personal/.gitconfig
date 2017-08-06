@@ -20,5 +20,9 @@
 	old = red
 	new = green
 	meta = cyan
+[push]
+	default = simple
 [commit]
 	gpgsign = true
+[gpg]
+	program = gpg2
