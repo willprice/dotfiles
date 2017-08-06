@@ -20,3 +20,5 @@
 	old = red
 	new = green
 	meta = cyan
+[commit]
+	gpgsign = true
