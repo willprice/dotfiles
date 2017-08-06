@@ -1,0 +1,6 @@
+session_name: ipcv
+windows:
+- window_name: build
+  panes:
+    - shell_command: make
+      working_dir: ~/cv/labs/build

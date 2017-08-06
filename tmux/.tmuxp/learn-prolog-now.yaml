@@ -1,0 +1,9 @@
+session_name: learn-prolog-now
+windows:
+  - window_name: swipl dev
+    layout: main-vertical
+    options:
+      main-pane-width: 120
+    panes:
+      - vim -c ':NERDTree'
+      - swipl
