@@ -4,7 +4,9 @@ set -l candidate_path_directories \
       "$HOME/.bin"\
       "$HOME/.gem/ruby/"*/bin \
       "$HOME/.rvm/bin" \
-      "$HOME/.local/bin"
+      "$HOME/.local/bin" \
+      "/opt/sonar-scanner/bin"
+
 for dir in $candidate_path_directories
     add_to_path_if_exists "$dir"
 end

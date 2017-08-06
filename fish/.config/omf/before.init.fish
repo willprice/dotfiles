@@ -19,7 +19,5 @@ if test -d "$MACHINE_SCRIPT_PATH"
 end
 
 alias mdv="python2 $HOME/src/terminal_markdown_viewer/mdv.py"
-alias f="fuck"
-eval (thefuck --alias | tr '\n' ';')
 
 set -x MANPATH "/usr/local/man:/usr/share/man"
