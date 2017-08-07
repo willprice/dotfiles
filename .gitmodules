@@ -4,3 +4,6 @@
 [submodule "bash/.bash-it"]
 	path = bash/.bash-it
 	url = https://github.com/Bash-it/bash-it.git
+[submodule "fish/.local/share/omf"]
+	path = fish/.local/share/omf
+	url = https://github.com/oh-my-fish/oh-my-fish.git
