@@ -2,5 +2,4 @@
 
 alias_command 'pacman' 'sudo pacman --color=auto'
 alias_command 'pacaur' 'sudo pacaur'
-alias_command 'ls'     'ls --color'
 alias_command 'g'      'git'
