@@ -7,3 +7,6 @@
 [submodule "fish/.local/share/omf"]
 	path = fish/.local/share/omf
 	url = https://github.com/oh-my-fish/oh-my-fish.git
+[submodule "fish/.fzf"]
+	path = fish/.fzf
+	url = https://github.com/junegunn/fzf.git
