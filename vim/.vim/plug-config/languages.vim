@@ -64,6 +64,8 @@ Plug 'klen/python-mode', { 'for': 'python' }
 " ##########################
 " OTHERS
 " ##########################
+" C scope for navigating C projects
+Plug 'vim-scripts/cscope.vim', { 'for': 'c' }
 " Run processing sketches from within vim
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 " Rust
