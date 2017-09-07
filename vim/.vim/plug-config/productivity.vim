@@ -39,7 +39,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'reinh/vim-makegreen'
 
 " UltiSnips, a snippet engine that is compatible with YCM
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 " Snippets for UltiSnips
 Plug 'honza/vim-snippets'
 " Tab configuration
