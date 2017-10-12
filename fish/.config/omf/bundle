@@ -8,6 +8,7 @@ package mvn
 package nvm
 package pbcopy
 package proxy
+package pyenv
 package rvm
 package vcs
 package virtualfish
