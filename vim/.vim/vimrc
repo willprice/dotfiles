@@ -24,6 +24,9 @@ nnoremap k gk
 nnoremap <leader> :set hlsearch!<cr>
 " Toggle whitespace characters
 nnoremap <F4> :set list!<cr>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>t :Tags<CR>
 
 
 
