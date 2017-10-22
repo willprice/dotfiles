@@ -53,8 +53,6 @@ Plug 'sjl/gundo.vim'
 " Edit files from remote locations
 " :MirrorConfig
 Plug 'zenbro/mirror.vim'
-" ctags support
-Plug 'c0r73x/neotags.nvim'
 " File tree browser
 Plug 'scrooloose/nerdtree'
 " FZF fuzzy file/buffer searching
