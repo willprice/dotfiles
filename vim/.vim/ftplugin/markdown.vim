@@ -1,6 +1,6 @@
-set tabstop=2
-set shiftwidth=2
-set spell spelllang=en_gb
+setlocal tabstop=2
+setlocal shiftwidth=2
+setlocal spell spelllang=en_gb
 map <buffer> ,q i`<esc>Ea`<esc>
 
 " -------------------------------------
