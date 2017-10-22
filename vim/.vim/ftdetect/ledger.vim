@@ -1,2 +1,2 @@
 " Set ledger highlighting
-au BufNewFile,BufRead *.ldg,*.ledger set ft=ledger
+au BufNewFile,BufRead *.ldg,*.ledger setlocal ft=ledger

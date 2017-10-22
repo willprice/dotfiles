@@ -1,2 +1,2 @@
 " arduinuo syntax
-au BufNewFile,BufRead *.ino set ft=arduino
+au BufNewFile,BufRead *.ino setlocal ft=arduino

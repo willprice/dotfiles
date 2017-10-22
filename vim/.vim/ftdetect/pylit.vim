@@ -1,3 +1,3 @@
 " Python
 autocmd BufRead *.py inoremap # X<c-h>#
-autocmd BufNewFile,BufRead *.pylit set filetype=pylit
+autocmd BufNewFile,BufRead *.pylit setlocallocal filetype=pylit
