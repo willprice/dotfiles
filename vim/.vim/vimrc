@@ -1,89 +1,54 @@
-" Setting this first prevents hiccups due to compatibility
+" Compatibility {{{1
 set nocompatible
 filetype off
 set encoding=utf-8
 
 
-" Set leader
-let mapleader=","
-
-" #### BUNDLES ####
+" Bundle {{{1
 call plug#begin('~/.vim/bundle')
-for file in split(globpath(expand('~/.vim/plug-config'), '*\.vim'), '\n')
-  exe 'source' file
-endfor
+source ~/.vim/plug-config.vim
 call plug#end()
 
-" ##### MAPS ######
-" <leader>W removes trailing whitespace, neat!
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Key bindings {{{1
+" Set leader
+let mapleader=","
+" <leader>W removes trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Tired of using esc for normal mode
 inoremap jj <ESC>
-
-" Autocomplete like eclipse
-inoremap <C-Space> <C-x><C-o>
-inoremap <C-@>     <C-x><C-o>
-
 " wrapped lines navigation
 nnoremap j gj
 nnoremap k gk
-
 " hlsearch toggle
-nnoremap <F1> :set hlsearch!<cr>
-
+nnoremap <leader> :set hlsearch!<cr>
 " Toggle whitespace characters
 nnoremap <F4> :set list!<cr>
 
 
-" ##### EDITOR CONF #####
-" Backspace expected behaviour
-"   indent = allow backspacing over autoindent
-"   eol    = allow backspacing over newlines
-"   start  = allow backspacing over the start of insert
-set backspace=indent,eol,start
 
+" Basic configuration {{{1
 " Hide buffers that aren't visible
 set hidden
-
 " Don't update the display while executing macros
 set lazyredraw
-
-" Enable enhanced command-line completion. Presumes you have compiled
-" with +wildmenu.  See :help 'wildmenu'
-set wildmenu
-
 " Wrap lines when vim can't display all of it
 set wrap
-
-" History of commands, searches, expressions and input lines are saved
-" into different tables, `history` sets the max number of entries for each table
-set history=1000
-
 " Highlight search matches
 set hlsearch
-
-" Set incremental searching
-set incsearch
-
 " Only match case sensitive when upper case letters are used in searches
 set smartcase
-
 " Show numbers in the left hand margin
 set number
-
 " Hide mouse pointer when typing
 set mousehide
-
 " Only syntax highlight to this number of columns
 " prevents slow performance when working on files that are composed of a
 " single very long line
 set synmaxcol=1024
-
 " Smartly indent the next line, similar to `cindent`. If `cindent` is
 " already on then `smartindent` has no effect.
 set smartindent
-
 " Expand tab character into the corresponding number of spaces
 set expandtab
 " Tabs count for 4 spaces
@@ -91,20 +56,19 @@ set tabstop=4
 " Number of spaces to use for each step of autoindent
 " 0 = use the value of `tabstop`
 set shiftwidth=0
-
 " `virtualedit` enables editing a file in space where there is no space
 " think of block selecting across multiple lines of different length
 " `all` enables virtualediting in block and insert mode.
 set virtualedit=all
-
 " Don't leave byte-order-marks at the start of files, people don't
 " like them
 set nobomb
-
 filetype plugin indent on
 syntax on
+" Fold based on fold-markers
+set foldmethod=marker
 
-" Always show the status line
-set laststatus=2
 
-colorscheme base16-solarized-dark
+" Appearance {{{1
+colorscheme NeoSolarized
+set background=dark 
