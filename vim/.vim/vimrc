@@ -35,12 +35,12 @@ nnoremap <F1> :set hlsearch!<cr>
 " Toggle whitespace characters
 nnoremap <F4> :set list!<cr>
 
-" Switch lines
-nnoremap - ddp
-
 
 " ##### EDITOR CONF #####
 " Backspace expected behaviour
+"   indent = allow backspacing over autoindent
+"   eol    = allow backspacing over newlines
+"   start  = allow backspacing over the start of insert
 set backspace=indent,eol,start
 
 " Hide buffers that aren't visible
@@ -49,9 +49,6 @@ set hidden
 " Don't update the display while executing macros
 set lazyredraw
 
-" At least let yourself know what mode you're in
-set showmode
-
 " Enable enhanced command-line completion. Presumes you have compiled
 " with +wildmenu.  See :help 'wildmenu'
 set wildmenu
@@ -59,63 +56,55 @@ set wildmenu
 " Wrap lines when vim can't display all of it
 set wrap
 
-" Set decent length history
+" History of commands, searches, expressions and input lines are saved
+" into different tables, `history` sets the max number of entries for each table
 set history=1000
 
-" Add mouse support in the terminal - for scrolling only...
-set mouse=a
-
-" Set highlight search
+" Highlight search matches
 set hlsearch
 
 " Set incremental searching
 set incsearch
 
-" Work in screen
-set t_Co=256
-
 " Only match case sensitive when upper case letters are used in searches
 set smartcase
 
-" Set line numbering
+" Show numbers in the left hand margin
 set number
 
 " Hide mouse pointer when typing
 set mousehide
 
-" Syntax coloring line limiting (large files take too long to load otherwise)
-set synmaxcol=2048
+" Only syntax highlight to this number of columns
+" prevents slow performance when working on files that are composed of a
+" single very long line
+set synmaxcol=1024
 
+" Smartly indent the next line, similar to `cindent`. If `cindent` is
+" already on then `smartindent` has no effect.
 set smartindent
 
-" Set tab spaces
+" Expand tab character into the corresponding number of spaces
 set expandtab
+" Tabs count for 4 spaces
 set tabstop=4
-set shiftwidth=4
+" Number of spaces to use for each step of autoindent
+" 0 = use the value of `tabstop`
+set shiftwidth=0
 
-" Set virtualedit up
+" `virtualedit` enables editing a file in space where there is no space
+" think of block selecting across multiple lines of different length
+" `all` enables virtualediting in block and insert mode.
 set virtualedit=all
-
-" Prolog takes precedence over perl
-" TODO: Fix doesn't work
-let g:filetype_pl="prolog"
-
 
 " Don't leave byte-order-marks at the start of files, people don't
 " like them
 set nobomb
-" Get that filetype stuff happening
+
 filetype plugin indent on
 syntax on
 
 " Always show the status line
 set laststatus=2
 
-" Syntax highlight debugging tools
-map <F7> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-
 colorscheme base16-solarized-dark
-"let background='light'
