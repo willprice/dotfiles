@@ -1,5 +1,5 @@
 " Hide markdown link definitions and just show display text.
-set conceallevel=2
+setlocal conceallevel=2
 
 " Don't fold level 1 headers
 let g:vim_markdown_folding_style_pythonic = 1
@@ -18,5 +18,5 @@ let g:vim_markdown_new_list_item_indent = 2
 
 nnoremap <F6> :Toc<CR>
 
-set textwidth=80
-set formatoptions+=a " 'a' sets automatic formatting of paragraphs
+setlocal textwidth=80
+setlocal formatoptions+=a " 'a' sets automatic formatting of paragraphs

@@ -5,6 +5,7 @@ function! EnsureDirectoryExists (dir)
     endif
 endfunction
 
+call EnsureDirectoryExists($HOME . '/.tmp')
 set directory=~/.tmp/
 call EnsureDirectoryExists($HOME . '/.tmp/backup')
 set backupdir=~/.tmp/backup
