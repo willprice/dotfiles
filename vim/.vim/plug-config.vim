@@ -39,6 +39,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Start typing on a new line with `table-mode-separator` to start a
 " table
 Plug 'dhruvasagar/vim-table-mode'
+" Asynchronous linting (c.f. syntastic)
+Plug 'w0rp/ale'
 " A tabular replacement
 " :EasyAlign, <Enter>, ga
 Plug 'junegunn/vim-easy-align'
@@ -85,6 +87,8 @@ Plug 'saltstack/salt-vim', { 'for': 'salt' }
 Plug 'vim-scripts/SQLComplete.vim', { 'for': 'sql' }
 " Prolog
 Plug 'adimit/prolog.vim', { 'for': 'prolog' }
+" SaltStack
+Plug 'saltstack/salt-vim'
 
 
 " Extended language support {{{1
@@ -93,8 +97,6 @@ Plug 'adimit/prolog.vim', { 'for': 'prolog' }
 Plug 'shime/vim-livedown', { 'for': 'markdown' }
 " Syntax highlighting for a lot of languages
 Plug 'sheerun/vim-polyglot'
-" Static JS analysis
-Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 " TypeScript IDE functionality
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' } " typescript IDE
 " Emmet - expand CSS like selectors into HTML
