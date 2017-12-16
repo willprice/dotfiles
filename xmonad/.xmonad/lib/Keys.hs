@@ -15,7 +15,7 @@ import qualified SessionType
 
 modMask = mod4Mask
 
-getKeys sessionType = customKeys sessionType <+> keys defaultConfig
+getKeys sessionType = customKeys sessionType <+> keys def
 
 
 customKeys sessionType conf = M.fromList $ concat [ coreKeys conf
@@ -49,10 +49,10 @@ coreKeys XConfig {XMonad.modMask = modm} =
         , ((modm, xK_Down), spawn "xdotool key XF86AudioMute")
         ]
 
-screenKeys XConfig {XMonad.modMask = modm} = 
-        [ ((modm .|. mask, key), screenWorkspace scr >>= 
+screenKeys XConfig {XMonad.modMask = modm} =
+        [ ((modm .|. mask, key), screenWorkspace scr >>=
           flip whenJust (windows . action))
-        | (key, scr)     <- zip [xK_w, xK_e, xK_r] [0, 2, 1] -- Screens 1 and 2 are flipped in ordering. - not at the moment they're not
+        | (key, scr)     <- zip [xK_w, xK_e, xK_r] [0, 1, 2]
         , (action, mask) <- [ (W.view, noModMask) , (W.shift, shiftMask)]]
 
 

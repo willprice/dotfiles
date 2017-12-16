@@ -6,9 +6,9 @@ type Command = String
 
 terminal = "konsole -e fish"
 graphicalEditor = "emacsclient -c"
-browser = "google-chrome-stable"
+browser = "firefox"
 fileBrowser = "caja"
-mailClient = "nylas"
+mailClient = "mailspring"
 dmenu = concat $ intersperse " "
     [ "dmenu_run -b -fn", font
     , "-p",  prompt
