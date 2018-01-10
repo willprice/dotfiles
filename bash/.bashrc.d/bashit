@@ -1,6 +1,6 @@
 export BASH_IT="$HOME/.bash-it"
 # location /.bash_it/themes/
-export BASH_IT_THEME='clean'
+export BASH_IT_THEME='powerline-multiline'
 
 # (Advanced): Uncomment this to make Bash-it reload itself automatically
 # after enabling or disabling aliases, plugins, and completions.
