@@ -1,7 +1,12 @@
-set tabstop=2
-set shiftwidth=2
-set spell spelllang=en_gb
+setlocal tabstop=2
+setlocal shiftwidth=2
+setlocal spell spelllang=en_gb
+setlocal conceallevel=2
+setlocal textwidth=80
+setlocal formatoptions+=a " 'a' sets automatic formatting of paragraphs
+
 map <buffer> ,q i`<esc>Ea`<esc>
+map gm :call LivedownPreview()<CR>
 
 " -------------------------------------
 " livedown config
@@ -14,6 +19,4 @@ let g:livedown_open = 1
 
 " the port on which Livedown server will run
 let g:livedown_port = 1337
-
-map gm :call LivedownPreview()<CR>
 " -------------------------------------

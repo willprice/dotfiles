@@ -30,7 +30,6 @@ import XMonad.Config.Desktop
 import XMonad.Config.Gnome
 import XMonad.Config.Kde
 import XMonad.Config.Xfce
-import System.Taffybar.Hooks.PagerHints (pagerHints)
 
 import Colours
 import Commands
@@ -41,7 +40,6 @@ import LogHook
 import Keys
 import SessionType
 
-import XmobarConfig
 ------------------------------------------------------------------------
 -- Main:
 ------------------------------------------------------------------------
@@ -55,9 +53,6 @@ main = do
              sessionType <- getSessionType
              let baseConfig = getSessionConfig sessionType
              xmonad $ ewmh        -- EWMH provides EWMH implementation for XMonad
-                    $ pagerHints  -- Adds additional hints
-                                  -- _XMONAD_CURRENT_LAYOUT and _XMONAD_VISIBLE_WORKSPACES
-                                  -- for use by taffybar 
                     $ docks       -- Creates spaces for docks so windows don't overlay them
                     $ baseConfig { manageHook = getManageHook sessionType
                                  , startupHook = getStartupHook sessionType

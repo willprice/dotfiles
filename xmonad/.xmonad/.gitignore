@@ -3,3 +3,4 @@ xmonad.state
 *.errors
 *.hi
 *.o
+.stack-work

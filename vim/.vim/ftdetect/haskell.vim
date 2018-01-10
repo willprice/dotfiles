@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.hs set ft=haskell
+au BufNewFile,BufRead *.hs setlocal ft=haskell

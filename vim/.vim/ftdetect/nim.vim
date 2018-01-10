@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.nim set ft=nim
+au BufNewFile,BufRead *.nim setlocal ft=nim

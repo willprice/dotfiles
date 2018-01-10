@@ -1,2 +1,2 @@
-au BufNewFile,BufRead *.adoc set ft=asciidoc
-set textwidth=72
+au BufNewFile,BufRead *.adoc setlocal ft=asciidoc
+setlocal textwidth=72

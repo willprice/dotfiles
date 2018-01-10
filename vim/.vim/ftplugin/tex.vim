@@ -1,3 +1,3 @@
-set spell spelllang=en_gb
-set shiftwidth=2
-set tabstop=2
+setlocal spell spelllang=en_gb
+setlocal shiftwidth=2
+setlocal tabstop=2

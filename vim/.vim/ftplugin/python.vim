@@ -1,9 +1,9 @@
 " Execute file being edited with <Shift> + e:
-map <leader> <c> :w<CR> :!/usr/bin/env python %<CR>
+noremap <leader><c> :w<CR> :!/usr/bin/env python %<CR>
 
-set shiftwidth=4
-set tabstop=4
-set expandtab
+setlocal shiftwidth=4
+setlocal tabstop=4
+setlocal expandtab
 
 " Pymode rope home recursive scan fix
 let g:pymode_rope_lookup_project = 0

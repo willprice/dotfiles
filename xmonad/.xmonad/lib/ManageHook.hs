@@ -3,7 +3,6 @@ module ManageHook (getManageHook) where
 -- against a new window. For example we have rules that float windows based
 -- on their window class (obtained via `xprop | grep WM_CLAS`)
 import XMonad
-import XMonad.Config (defaultConfig)
 import XMonad.Actions.SpawnOn
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
@@ -17,7 +16,7 @@ import ScratchPads
 getManageHook sessionType = screenRulesManageHook
            <+> manageDocks
            <+> scratchPadsManageHook
-           <+> XMonad.manageHook defaultConfig
+           <+> XMonad.manageHook def
 
 scratchPadsManageHook = namedScratchpadManageHook scratchPads
 
@@ -36,8 +35,6 @@ windowClassesToFloat = ["xmessage"
                        , "zenity"
                        , "feh"
                        , "klipper"
-                       , "skype"
-                       , "plasmashell"
                        , "insync.py"
                        , "pyqt"
                        , "albert"

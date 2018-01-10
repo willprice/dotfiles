@@ -1,2 +1,2 @@
 " markdown file highlighting
-au BufRead,BufNewFile *.md set ft=markdown
+au BufRead,BufNewFile *.md setlocal ft=markdown

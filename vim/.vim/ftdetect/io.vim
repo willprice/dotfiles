@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.io set ft=io
+au BufNewFile,BufRead *.io setlocal ft=io
