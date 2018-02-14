@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # vim: set ft=sh:
+set -e
+
 target_directory="${1:-$HOME}"
 cd $(dirname $(readlink -f $0))
 
