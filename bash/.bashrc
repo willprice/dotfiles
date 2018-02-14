@@ -11,4 +11,14 @@ for config in "${BASHRC_D}"/*; do
     [[ -f "$config" ]] && source "$config"
 done
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+hostname="$(hostname --short)"
+for host_config in "$BASHRC_D"/hosts/*.sh; do
+    host_pattern="$(basename "$host_config" .sh)"
+    echo "Checking host pattern $host_pattern"
+    case "$hostname" in
+        $host_pattern*) 
+            echo "Matched"
+            source "$host_config" 
+        ;;
+    esac
+done

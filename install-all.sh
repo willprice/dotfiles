@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vim: set ft=sh:
 target_directory="${1:-$HOME}"
-cd $(dirname $(realpath $0))
+cd $(dirname $(readlink -f $0))
 
 EXCLUDED_PACKAGES_REGEX=".*\(system\|personal\|x230\|matplotlib\).*"
 
