@@ -20,9 +20,25 @@
 	old = red
 	new = green
 	meta = cyan
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+    prompt = false
 [push]
 	default = simple
 [commit]
 	gpgsign = false
 [gpg]
 	program = gpg2
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	prompt = false
+[merge "jupyternotebook"]
+	driver = git-nbmergedriver merge %O %A %B %L %P
+	name = jupyter notebook merge driver
