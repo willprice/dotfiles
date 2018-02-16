@@ -1,0 +1,13 @@
+function pd-head {
+    python -c "import pandas as pd; l=pd.read_pickle('$1'); print(l.head())"
+}
+
+function pd-cols {
+    python -c "import pandas as pd; l=pd.read_pickle('$1'); print(l.columns)"
+}
+
+function pd-index {
+    python -c "import pandas as pd; l=pd.read_pickle('$1'); print(l.index)"
+}
+
+#vim: set ft=sh:
