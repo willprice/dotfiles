@@ -3,7 +3,6 @@ setlocal shiftwidth=2
 setlocal spell spelllang=en_gb
 setlocal conceallevel=2
 setlocal textwidth=80
-setlocal formatoptions+=a " 'a' sets automatic formatting of paragraphs
 
 map <buffer> ,q i`<esc>Ea`<esc>
 map gm :call LivedownPreview()<CR>
