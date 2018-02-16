@@ -101,6 +101,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' } " typescript IDE
 " Emmet - expand CSS like selectors into HTML
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+" Python mode
+Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
 
 
 " Themes {{{1
