@@ -1,14 +1,9 @@
 export BASH_IT="$HOME/.bash-it"
 # location /.bash_it/themes/
-<<<<<<< Updated upstream
 : ${BASH_IT_THEME:='powerline-multiline'}
-export BASH_IT_THEME
-||||||| merged common ancestors
-export BASH_IT_THEME='powerline-multiline'
-=======
-export BASH_IT_THEME='powerline-multiline'
-export POWERLINE_RIGHT_PROMPT='in_vim clock battery user_info hostname'
->>>>>>> Stashed changes
+#export POWERLINE_RIGHT_PROMPT='in_vim clock battery user_info hostname'
+export POWERLINE_LEFT_PROMPT='python_venv ruby scm cwd'
+export POWERLINE_RIGHT_PROMPT='clock user_info hostname last_status'
 
 # (Advanced): Uncomment this to make Bash-it reload itself automatically
 # after enabling or disabling aliases, plugins, and completions.
