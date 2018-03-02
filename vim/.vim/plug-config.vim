@@ -60,6 +60,10 @@ Plug 'scrooloose/nerdtree'
 " FZF fuzzy file/buffer searching
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" Snippet engine
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 
 
 " Languages {{{1

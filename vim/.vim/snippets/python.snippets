@@ -26,9 +26,20 @@ snippet tests
 
 	if __name__ == '__main__':
 		unittest.main()
+
 snippet ae
 	self.assertEqual(${1:expected}, ${2:actual})
 
 snippet main
 	if __name__ == '__main__':
 		${1}
+
+snippet parser
+	import argparse
+	parser = argparse.ArgumentParser(
+		description='${1:description}',
+		formatter_class=argparse.ArgumentDefaultsHelpFormatter
+	)
+	parser.add_argument('${2:arg_name}', type=${3:type})
+
+	args = parser.parse_args()
