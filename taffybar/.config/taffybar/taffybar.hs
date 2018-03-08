@@ -28,7 +28,7 @@ pad = wrap " " " "
 
 memCallback = do
   mi <- parseMeminfo
-  return [(memoryTotal mi - memoryAvailable mi) / memoryTotal mi]
+  return [(memoryTotal mi - memoryFree mi) / memoryTotal mi]
 
 cpuCallback = do
   (userLoad, systemLoad, totalLoad) <- cpuLoad
