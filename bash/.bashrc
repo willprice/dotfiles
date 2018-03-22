@@ -11,10 +11,10 @@ for config in "${BASHRC_D}"/*; do
     [[ -f "$config" ]] && source "$config"
 done
 
-hostname="$(hostname --short)"
+hostname="$(hostname)"
 for host_config in "$BASHRC_D"/hosts/*.sh; do
     host_pattern="$(basename "$host_config" .sh)"
-    if [[ "$hostname" = $host_pattern* ]]; then
+    if [[ "$hostname" = *$host_pattern* ]]; then
         source "$host_config" 
     fi
 done
