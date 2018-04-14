@@ -16,6 +16,7 @@
     s = status
     sv = stash
     p = push
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 [color "diff"]
     old = red
     new = green
