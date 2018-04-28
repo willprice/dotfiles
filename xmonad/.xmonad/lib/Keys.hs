@@ -37,10 +37,11 @@ coreKeys XConfig {XMonad.modMask = modm} =
         , ((modm .|. shiftMask, xK_t), spawn $ browser ++ " --new-window https://trello.com/b/pXd6FcRu/to-do")
         , ((modm .|. shiftMask, xK_u), spawn $ fileBrowser ++ " ~")
         , ((modm .|. shiftMask, xK_v), spawn disableScreenSaver)
-        , ((modm .|. shiftMask, xK_d), spawn "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=flndonddgbgofbmbnpodicicaoanohed")
+        , ((modm .|. shiftMask, xK_d), spawn "zeal")
+        , ((modm, xK_d), namedScratchpadAction scratchPads "zeal")
         , ((modm, xK_v), spawn blankScreen)
         , ((modm .|. shiftMask, xK_minus), spawn "xdotool key XF86AudioLowerVolume")
-        , ((modm .|. shiftMask, xK_equal), spawn $ "xdotool key XF86AudioRaiseVolume")
+        , ((modm .|. shiftMask, xK_equal), spawn "xdotool key XF86AudioRaiseVolume")
 
         , ((0, xK_Print), spawn screenShot)
         , ((modm .|. shiftMask, xK_m), spawn mailClient)
@@ -53,6 +54,7 @@ screenKeys XConfig {XMonad.modMask = modm} =
         [ ((modm .|. mask, key), screenWorkspace scr >>=
           flip whenJust (windows . action))
         | (key, scr)     <- zip [xK_w, xK_e, xK_r] [0, 1, 2]
+        -- | (key, scr)     <- zip [xK_w, xK_e, xK_r] [1, 0, 2]
         , (action, mask) <- [ (W.view, noModMask) , (W.shift, shiftMask)]]
 
 

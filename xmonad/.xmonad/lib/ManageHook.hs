@@ -26,10 +26,11 @@ screenRulesManageHook = composeAll . concat $
                 , [className =? cls --> doIgnore | cls <- windowClassesToIgnore ]
                 , [className =? cls --> doFloat | cls <- windowClassesToFloat ]
                 , [className =? cls --> viewShift desktop | (cls, desktop) <- windowClassesToShift]
+                , [className =? "zeal" --> doRectFloat (W.RationalRect 0 0 0.9 0.9)]
                 ]
                 where viewShift = doF . liftM2 (.) W.greedyView W.shift
 
-windowClassesToFloat = ["xmessage"
+windowClassesToFloat = [ "xmessage"
                        , "yakuake"
                        , "pavucontrol"
                        , "zenity"

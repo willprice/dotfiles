@@ -4,5 +4,4 @@ import XMonad
 import XMonad.Util.NamedScratchpad
 
 scratchPads :: [NamedScratchpad]
-scratchPads = [ --NS "zeal" "zeal" (className =? "Zeal") defaultFloating
-              ]
+scratchPads = [NS "zeal" "zeal" (className =? "Zeal") nonFloating]
