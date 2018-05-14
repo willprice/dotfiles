@@ -1,7 +1,4 @@
-#!/usr/bin/env bash
-
 BASHRC_D="$HOME/.bashrc.d"
-
 
 for function_definition in "$BASHRC_D"/functions/*.sh; do
     source "$function_definition"
@@ -18,3 +15,7 @@ for host_config in "$BASHRC_D"/hosts/*.sh; do
         source "$host_config" 
     fi
 done
+
+if command -v direnv >/dev/null 2>&1; then
+    eval "$(direnv hook bash)"
+fi
