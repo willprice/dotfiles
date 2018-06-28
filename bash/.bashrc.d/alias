@@ -4,3 +4,4 @@ alias pacman='sudo pacman --color=auto'
 alias pacaur='sudo pacaur'
 alias ls='ls --color'
 alias g=git
+alias tmux='tmux -u'
