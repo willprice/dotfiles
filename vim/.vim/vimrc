@@ -73,5 +73,5 @@ set foldmethod=marker
 
 
 " Appearance {{{1
-colorscheme NeoSolarized
+silent! colorscheme NeoSolarized
 set background=dark 
