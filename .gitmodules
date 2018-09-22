@@ -7,9 +7,6 @@
 [submodule "fish/.local/share/omf"]
 	path = fish/.local/share/omf
 	url = https://github.com/oh-my-fish/oh-my-fish.git
-[submodule "fish/.fzf"]
-	path = fish/.fzf
-	url = https://github.com/junegunn/fzf.git
 [submodule "xmonad/.xmonad/xmonad-contrib"]
 	path = xmonad/.xmonad/xmonad-contrib
 	url = https://github.com/xmonad/xmonad-contrib
@@ -19,3 +16,6 @@
 [submodule "pyenv/.pyenv"]
 	path = pyenv/.pyenv
 	url = https://github.com/pyenv/pyenv.git
+[submodule "fzf/.fzf"]
+	path = fzf/.fzf
+	url = https://github.com/junegunn/fzf.git
