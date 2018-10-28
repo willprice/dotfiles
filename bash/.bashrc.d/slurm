@@ -1,0 +1,1 @@
+alias sbatch='sbatch --mail-user="will.price@bristol.ac.uk"'
