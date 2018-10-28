@@ -74,4 +74,9 @@ set foldmethod=marker
 
 " Appearance {{{1
 silent! colorscheme NeoSolarized
-set background=dark 
+let _time = strftime("%H")
+if _time > 8 && _time < 20
+    set background=light
+else
+    set background=dark
+endif
