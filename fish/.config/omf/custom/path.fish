@@ -5,6 +5,7 @@ set -l candidate_path_directories \
       "$HOME/.gem/ruby/"*/bin \
       "$HOME/.rvm/bin" \
       "$HOME/.local/bin" \
+      "$HOME/.cargo/bin" \
       "/opt/sonar-scanner/bin"
 
 for dir in $candidate_path_directories
