@@ -40,7 +40,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " table
 Plug 'dhruvasagar/vim-table-mode'
 " Asynchronous linting (c.f. syntastic)
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 " A tabular replacement
 " :EasyAlign, <Enter>, ga
 Plug 'junegunn/vim-easy-align'
@@ -107,6 +107,22 @@ Plug 'Quramy/tsuquyomi', { 'for': 'typescript' } " typescript IDE
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 " Python mode
 Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
+" Haskell intero support
+Plug 'parsonsmatt/intero-neovim', { 'for': 'haskell' }
+Plug 'neomake/neomake' 
+" Snakemake
+Plug 'ivan-krukov/vim-snakemake'
+" BATS bash testing
+Plug 'vim-scripts/bats.vim'
+" Undo tree
+Plug 'mbbill/undotree'
+" LEGO Mindstorms - NQC
+Plug 'vim-scripts/nqc.vim'
+
+
+" Gonvim
+Plug 'equalsraf/neovim-gui-shim'
+
 
 
 " Themes {{{1
@@ -119,3 +135,4 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'sjl/badwolf'
 Plug 'iCyMind/NeoSolarized'
+
