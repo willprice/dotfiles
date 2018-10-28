@@ -15,7 +15,6 @@ for host_config in "$BASHRC_D"/hosts/*.sh; do
         source "$host_config" 
     fi
 done
-<<<<<<< 3708754041cae44327fca11f0167b0e5da234ea1
 
 if command -v direnv >/dev/null 2>&1; then
     eval "$(direnv hook bash)"
