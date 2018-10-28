@@ -1,1 +1,1 @@
-/home/wp/.fzf/shell/key-bindings.fish
+/home/will/.fzf/shell/key-bindings.fish
