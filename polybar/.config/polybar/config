@@ -19,7 +19,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/bar]
-monitor = ${env:MONITOR:LVDS1}
+monitor = ${env:MONITOR:DP2-2-8}
 monitor-fallback = eDP1
 width = 100%
 height = 24
@@ -109,8 +109,8 @@ label-monitor = %name%
 ;   %index%
 ; Default: %icon%  %name%
 label-active = " %index% %icon% " 
-label-active-foreground = #ffffff
-label-active-background = #3f3f3f
+label-active-foreground = #3f3f3f
+label-active-background = #ffffff 
 label-active-underline = #fba922
 
 ; Available tokens:
@@ -120,7 +120,7 @@ label-active-underline = #fba922
 ; Default: %icon%  %name%
 label-occupied = %icon%
 label-occupied-background = #3f3f3f
-label-occupied-underline = #fff
+label-occupied-underline = #ffffff
 
 ; Available tokens:
 ;   %name%
@@ -138,7 +138,8 @@ label-urgent-underline = #9b0a20
 ;   %index%
 ; Default: %icon%  %name%
 label-empty = " %index% %icon% "
-label-empty-foreground = #55
+label-empty-foreground = #999
+label-empty-background = #3f3f3f
 
 [module/filesystem]
 type = internal/fs
@@ -222,7 +223,7 @@ format-underline = #0a6cf5
 label = %date% %time%
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
@@ -313,8 +314,8 @@ format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label = %temperature%
-label-warn = %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
