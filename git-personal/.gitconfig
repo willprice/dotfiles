@@ -45,3 +45,5 @@
     name = jupyter notebook merge driver
 [pull]
     rebase = true
+[help]
+	autocorrect = 20
