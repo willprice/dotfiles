@@ -95,4 +95,5 @@ main = do
 
   defaultTaffybar defaultTaffybarConfig { startWidgets = [ pager, note ]
                                         , endWidgets = reverse [ mpris2, wifi, battery, disk, cpu, mem, fs, tray, clock ]
+                                        , barHeight = 24
                                         }
