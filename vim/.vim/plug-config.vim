@@ -93,6 +93,8 @@ Plug 'vim-scripts/SQLComplete.vim', { 'for': 'sql' }
 Plug 'adimit/prolog.vim', { 'for': 'prolog' }
 " SaltStack
 Plug 'saltstack/salt-vim'
+" Markdown livedown view
+Plug 'shime/vim-livedown', { 'for': 'markdown' }
 
 
 " Extended language support {{{1

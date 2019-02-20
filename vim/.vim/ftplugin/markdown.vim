@@ -4,8 +4,8 @@ setlocal spell spelllang=en_gb
 setlocal conceallevel=2
 setlocal textwidth=80
 
-map <buffer> ,q i`<esc>Ea`<esc>
-map gm :call LivedownPreview()<CR>
+nnoremap <buffer> <leader>q  i`<Esc>Ea`<Esc>
+nnoremap <buffer> gm         :LivedownPreview()<CR>
 
 " -------------------------------------
 " livedown config
