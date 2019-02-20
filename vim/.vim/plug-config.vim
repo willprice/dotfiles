@@ -106,7 +106,7 @@ Plug 'Quramy/tsuquyomi', { 'for': 'typescript' } " typescript IDE
 " Emmet - expand CSS like selectors into HTML
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 " Python mode
-Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
+Plug 'python-mode/python-mode', { 'for': 'python' }
 " Haskell intero support
 Plug 'parsonsmatt/intero-neovim', { 'for': 'haskell' }
 Plug 'neomake/neomake' 
