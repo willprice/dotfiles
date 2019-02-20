@@ -40,7 +40,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " table
 Plug 'dhruvasagar/vim-table-mode'
 " Asynchronous linting (c.f. syntastic)
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 " A tabular replacement
 " :EasyAlign, <Enter>, ga
 Plug 'junegunn/vim-easy-align'
