@@ -118,7 +118,7 @@ label-active-underline = #fba922
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-occupied = %icon%
+label-occupied = " %index% %icon% "
 label-occupied-background = #3f3f3f
 label-occupied-underline = #ffffff
 
