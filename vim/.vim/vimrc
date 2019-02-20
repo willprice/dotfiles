@@ -73,6 +73,9 @@ set foldmethod=marker
 
 
 " Appearance {{{1
+" Prevent NeoSolarized from going yellow when opening
+" neovim in gnome-terminal
+set termguicolors
 silent! colorscheme NeoSolarized
 let _time = strftime("%H")
 if _time > 8 && _time < 20
