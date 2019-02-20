@@ -19,7 +19,6 @@ dmenu = concat $ intersperse " "
           prompt          = "Command"
           backgroundColor = "grey10"
           foregroundColor = "snow1"
-
 rofi = concat $ intersperse " "
    [ "rofi", "-combi-modi", "run,ssh,window"
    , "-matching", "fuzzy", "-threads", "4"
@@ -28,8 +27,6 @@ rofi = concat $ intersperse " "
    , "-terminal", "urxvt"
    , "-font", "'terminus 12'"
    ]
-
-screenShot = "import -window root -display :0.0 -screen /tmp/screenshot.png"
 
 disableScreenSaver = "xset -dpms s off s noexpose s noblank"
 blankScreen        = "sh -c 'sleep 1; xset dpms force standby'"
@@ -40,3 +37,5 @@ mediaplayerPrevSong = "mpc prev"
 lockscreen = "slock"
 
 documentationViewer = "zeal"
+
+screenShot = "import png:- | xclip -selection c -t image/png"
