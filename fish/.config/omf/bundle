@@ -1,6 +1,8 @@
 package bundler
 package foreign-env
+package nvm
 package pbcopy
 package pyenv
 package vcs
+theme agnoster
 theme bobthefish
