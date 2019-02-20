@@ -44,6 +44,9 @@ Plug 'w0rp/ale'
 " A tabular replacement
 " :EasyAlign, <Enter>, ga
 Plug 'junegunn/vim-easy-align'
+" Jump to a match with hotkeys (like f in zathura/vimium)
+Plug 'easymotion/vim-easymotion'
+
 " Git wrapper
 " :Gblame, :Gbrowse, :Gcd, :Gcommit, :Gdiff, :Gfetch, Ggrep, etc
 Plug 'tpope/vim-fugitive'
