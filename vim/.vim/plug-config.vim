@@ -118,7 +118,13 @@ Plug 'vim-scripts/bats.vim'
 Plug 'mbbill/undotree'
 " LEGO Mindstorms - NQC
 Plug 'vim-scripts/nqc.vim'
-
+" jq syntax
+Plug 'vito-c/jq.vim'
+" Language server protocol support (e.g. HIE)
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 " Gonvim
 Plug 'equalsraf/neovim-gui-shim'
