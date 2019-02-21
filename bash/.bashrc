@@ -16,6 +16,10 @@ for host_config in "$BASHRC_D"/hosts/*.sh; do
     fi
 done
 
+if command -v fish >/dev/null 2>&1; then
+    exec fish
+fi
+
 if command -v direnv >/dev/null 2>&1; then
     eval "$(direnv hook bash)"
 fi
