@@ -6,4 +6,4 @@ exec stack ghc -- \
   -fforce-recomp \
   -main-is main \
   -v0 \
-  -o "$1"
+  -o "${1:-xmonad-x86_64-linux}"
