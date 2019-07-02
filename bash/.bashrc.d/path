@@ -2,6 +2,7 @@
 
 # Later directories take precedence
 possible_dirs=("/opt/android-sdk/platform-tools" \
+               "$HOME/.cargo/bin" \
                "$HOME/.cabal/bin" \
                "$HOME/.bin" \
                "$HOME/bin" \
