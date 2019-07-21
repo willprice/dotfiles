@@ -5,6 +5,3 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-" Configure Deoplete to work with Ultisnips
-call deoplete#custom#source('ultisnips', 'rank', 1000)
