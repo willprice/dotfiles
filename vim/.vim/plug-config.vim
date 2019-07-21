@@ -119,4 +119,3 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'sjl/badwolf'
 Plug 'iCyMind/NeoSolarized'
-

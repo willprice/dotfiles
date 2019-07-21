@@ -10,6 +10,7 @@
 ├── ftplugin                # Configuration of lang specific plugins
 ├── gvimrc                  # Gvim specific configuration
 ├── haskellmode.config      # Haskell tip
+├── keybindings.vim         # Global keybindings
 ├── plugin                  # Global vim configurations
 ├── snippets
 ├── spell

@@ -3,31 +3,13 @@ set nocompatible
 filetype off
 set encoding=utf-8
 
-
 " Bundle {{{1
+
+source keybindings.vim
+
 call plug#begin('~/.vim/bundle')
 source ~/.vim/plug-config.vim
 call plug#end()
-
-
-" Key bindings {{{1
-" Set leader
-let mapleader=","
-" <leader>W removes trailing whitespace
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-" Tired of using esc for normal mode
-inoremap jj <ESC>
-" wrapped lines navigation
-nnoremap j gj
-nnoremap k gk
-" hlsearch toggle
-nnoremap <leader> :set hlsearch!<cr>
-" Toggle whitespace characters
-nnoremap <F4> :set list!<cr>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>t :Tags<CR>
-
 
 
 " Basic configuration {{{1
@@ -85,12 +67,3 @@ if _time > 8 && _time < 20
 else
     set background=dark
 endif
-
-" F1 usually brings up help, but I never want that. I usually
-" hit it instead of F2!
-inoremap <F1> nop
-nnoremap <F1> nop
-vnoremap <F1> nop
-
-" I got used to this thanks to spacemacs!
-nnoremap <space> :
