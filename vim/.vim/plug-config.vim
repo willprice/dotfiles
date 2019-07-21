@@ -32,8 +32,6 @@ Plug 'ap/vim-css-color'
 
 
 " Additional features {{{1
-" Asynchronous autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Table mode
 " :TableModeEnable
 " Start typing on a new line with `table-mode-separator` to start a
@@ -47,17 +45,11 @@ Plug 'junegunn/vim-easy-align'
 " Jump to a match with hotkeys (like f in zathura/vimium)
 Plug 'easymotion/vim-easymotion'
 
-" Git wrapper
-" :Gblame, :Gbrowse, :Gcd, :Gcommit, :Gdiff, :Gfetch, Ggrep, etc
-Plug 'tpope/vim-fugitive'
 " Shows additions and deletions for git in column
 Plug 'airblade/vim-gitgutter'
 " Graphical undo
 " :GundoShow
 Plug 'sjl/gundo.vim'
-" Edit files from remote locations
-" :MirrorConfig
-Plug 'zenbro/mirror.vim'
 " File tree browser
 Plug 'scrooloose/nerdtree'
 " FZF fuzzy file/buffer searching
@@ -65,7 +57,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Snippet engine
 Plug 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
+" Snippets are separated from the engine.
 Plug 'honza/vim-snippets'
 
 
@@ -86,8 +78,6 @@ Plug 'willprice/vim-gas', { 'for': 'gas' }
 Plug 'vim-scripts/VIP', { 'for': 'vhdl' }
 " Verilog
 Plug 'vhda/verilog_systemverilog.vim', { 'for': 'verilog' }
-" SCons
-Plug 'vim-scripts/scons.vim', { 'for': 'scons' }
 " SaltStack
 Plug 'saltstack/salt-vim', { 'for': 'salt' }
 " SQL
@@ -96,39 +86,26 @@ Plug 'vim-scripts/SQLComplete.vim', { 'for': 'sql' }
 Plug 'adimit/prolog.vim', { 'for': 'prolog' }
 " SaltStack
 Plug 'saltstack/salt-vim'
-" Markdown livedown view
-Plug 'shime/vim-livedown', { 'for': 'markdown' }
-
 
 " Extended language support {{{1
 " IDE like behaviour etc
-" Livedown, automatically refresh markdown generated HTML
-Plug 'shime/vim-livedown', { 'for': 'markdown' }
 " Syntax highlighting for a lot of languages
 Plug 'sheerun/vim-polyglot'
-" TypeScript IDE functionality
-Plug 'Quramy/tsuquyomi', { 'for': 'typescript' } " typescript IDE
 " Emmet - expand CSS like selectors into HTML
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 " Python mode
 Plug 'python-mode/python-mode', { 'for': 'python' }
 " Haskell intero support
 Plug 'parsonsmatt/intero-neovim', { 'for': 'haskell' }
-Plug 'neomake/neomake' 
+Plug 'neomake/neomake' " dependency of intero-vim.
 " Snakemake
 Plug 'ivan-krukov/vim-snakemake'
 " BATS bash testing
 Plug 'vim-scripts/bats.vim'
-" Undo tree
-Plug 'mbbill/undotree'
 " LEGO Mindstorms - NQC
 Plug 'vim-scripts/nqc.vim'
 " jq syntax
 Plug 'vito-c/jq.vim'
-
-" Gonvim
-Plug 'equalsraf/neovim-gui-shim'
-
 
 
 " Themes {{{1

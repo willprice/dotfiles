@@ -31,6 +31,8 @@ nnoremap <Leader>t :Tags<CR>
 
 
 " Basic configuration {{{1
+" I'm British!
+set spelllang=en_gb
 " Hide buffers that aren't visible
 set hidden
 " Don't update the display while executing macros
