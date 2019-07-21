@@ -87,7 +87,7 @@ Plug 'vim-scripts/SQLComplete.vim', { 'for': 'sql' }
 Plug 'adimit/prolog.vim', { 'for': 'prolog' }
 " SaltStack
 Plug 'saltstack/salt-vim'
-
+Plug 'tpope/vim-fugitive'
 " Extended language support {{{1
 " IDE like behaviour etc
 " Syntax highlighting for a lot of languages
