@@ -18,6 +18,7 @@ Plug 'tpope/vim-unimpaired'
 " Surround text objects with things
 " ds, cs, ys
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat' " Bring support for `.` on surround operations.
 " Extended % matching (HTML, LaTeX, Shell, Vim, XML)
 Plug 'tmhedberg/matchit'
 " Automatically end blocks
@@ -67,7 +68,7 @@ Plug 'vim-scripts/cscope.vim', { 'for': 'c' }
 " Run processing sketches from within vim
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 " Io
-Plug 'andreimaxim/vim-io', { 'for': 'io' }
+Plug 'davidbalbert/vim-io', { 'for': 'io' }
 " Nimrod
 Plug 'zah/nimrod.vim', { 'for': 'nim' }
 " Matlab
