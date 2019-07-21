@@ -85,3 +85,12 @@ if _time > 8 && _time < 20
 else
     set background=dark
 endif
+
+" F1 usually brings up help, but I never want that. I usually
+" hit it instead of F2!
+inoremap <F1> nop
+nnoremap <F1> nop
+vnoremap <F1> nop
+
+" I got used to this thanks to spacemacs!
+nnoremap <space> :
