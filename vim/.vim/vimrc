@@ -5,7 +5,7 @@ set encoding=utf-8
 
 " Bundle {{{1
 
-source keybindings.vim
+source ~/.vim/keybindings.vim
 
 call plug#begin('~/.vim/bundle')
 source ~/.vim/plug-config.vim
