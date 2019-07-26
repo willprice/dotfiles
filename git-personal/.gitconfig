@@ -49,3 +49,5 @@
     rebase = true
 [help]
 	autocorrect = 20
+[credential]
+	helper = cache
