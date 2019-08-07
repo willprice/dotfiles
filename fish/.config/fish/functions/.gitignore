@@ -1,0 +1,3 @@
+# this is a symlink installed by fzf and will vary depending
+# on $HOME.
+fzf_key_bindings.fish 

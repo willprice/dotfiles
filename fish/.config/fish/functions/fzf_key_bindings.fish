@@ -1,1 +1,0 @@
-/home/wp/.fzf/shell/key-bindings.fish

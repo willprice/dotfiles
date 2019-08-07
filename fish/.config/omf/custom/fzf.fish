@@ -1,4 +1,6 @@
-fzf_key_bindings
+if type -q fzf_key_bindings
+    fzf_key_bindings
+end
 
 if command_exists rg
     set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
