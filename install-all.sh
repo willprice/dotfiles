@@ -7,7 +7,8 @@ cd $(dirname $(readlink -f $0))
 
 EXCLUDED_PACKAGES_REGEX=".*\(system\|x230\|matplotlib\).*"
 
-for package in $(find . -mindepth 1 -maxdepth 1 -type d ! -regex "$EXCLUDED_PACKAGES_REGEX" ! -name '.*'); do
+for package in $(find . -mindepth 1 -maxdepth 1 -type d ! -regex "$EXCLUDED_PACKAGES_REGEX" ! -name '.*' | sort); do
+    echo "Installing $package"
   ./install.sh "$target_directory" "${package##./}"
 done
 
