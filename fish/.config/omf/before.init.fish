@@ -8,12 +8,13 @@ for dir in $dirs_to_source
     end
 end
 
-set -l MACHINE_SCRIPT_PATH "$OMF_CONFIG"/machine/(hostname)
-if test -d "$MACHINE_SCRIPT_PATH"
-    for file in "$MACHINE_SCRIPT_PATH"/*.fish
-        source "$file"
-        if test $OMF_DEBUG
-            echo "[OMF Debug] Loaded $file"
+for dir in "$OMF_CONFIG/machine/"*
+    if string match --quiet "*"(basename "$dir")"*" (hostname)
+        for file in "$dir"/*.fish
+            source "$file"
+            if test $OMF_DEBUG
+                echo "[OMF Debug] Loaded $file"
+            end
         end
     end
 end
