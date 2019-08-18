@@ -21,3 +21,5 @@ if [[ ! -z $PS1 ]]; then
         fi
     done
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

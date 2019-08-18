@@ -1,6 +1,7 @@
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. ~/.local/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
+POWERLINE_DIR="$(python3 -c 'from pathlib import Path; import powerline; print(Path(powerline.__file__).parent)')"
+. "$POWERLINE_DIR/bindings/bash/powerline.sh"
 
 # vim: set ft=sh:
