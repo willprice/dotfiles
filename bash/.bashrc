@@ -22,4 +22,12 @@ if [[ ! -z $PS1 ]]; then
     done
 fi
 
+# shut up pygame
+export PYGAME_HIDE_SUPPORT_PROMPT=hide
+# Try to get rid of pygame Alsa issues
+# see:
+# https://raspberrypi.stackexchange.com/questions/83254/pygame-and-alsa-lib-error
+export SDL_AUDIODRIVER=dsp
+
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
