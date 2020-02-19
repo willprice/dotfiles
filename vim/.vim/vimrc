@@ -47,6 +47,8 @@ set shiftwidth=0
 " think of block selecting across multiple lines of different length
 " `all` enables virtualediting in block and insert mode.
 set virtualedit=all
+" Indent things to the nearest indent stop (effects < > ops)
+set shiftround
 " Don't leave byte-order-marks at the start of files, people don't
 " like them
 set nobomb
