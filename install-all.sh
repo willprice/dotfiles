@@ -2,6 +2,7 @@
 # vim: set ft=sh:
 set -e
 
+git submodule update --init --recursive
 target_directory="${1:-$HOME}"
 cd $(dirname $(readlink -f $0))
 
