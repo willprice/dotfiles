@@ -2,7 +2,7 @@ name: Test
 on: push
 jobs:
   test:
-    runs_on: ubuntu-20.04
+    runs-on: ubuntu-20.04
     name: Test dotfiles linking and pre/post installation steps
     steps:
       - run: ls 
