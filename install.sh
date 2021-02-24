@@ -22,6 +22,7 @@ stow \
     --restow \
     --ignore "dotfile-post-symlink.sh" \
     --ignore "dotfile-pre-symlink.sh" \
+    --ignore ".gitignore" \
     --target "$target_directory" \
     "$package"
 
