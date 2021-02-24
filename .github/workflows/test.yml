@@ -9,6 +9,8 @@ jobs:
         run: sudo apt-get update -y && sudo apt-get install fish git stow python3 python3-pip vim 
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Remove bashrc*
+        run: rm -rf ~/.bash*
       - name: Test installing dotfiles
         run: ./install-all.sh
 
