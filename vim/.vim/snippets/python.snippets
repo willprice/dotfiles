@@ -15,13 +15,19 @@ snippet ae
 	self.assertEqual(${1:expected}, ${2:actual})
 
 snippet main
-	if __name__ == '__main__':
-		${1}
-
-snippet parser
 	import argparse
+	from pathlib import Path
+
+
 	parser = argparse.ArgumentParser(
 		description='${1:description}',
 		formatter_class=argparse.ArgumentDefaultsHelpFormatter
 	)
-	parser.add_argument('${2:arg_name}')
+	parser.add_argument('${2:arg_name}', type=Path)
+
+
+	def main(args):
+		${3}
+
+	if __name__ == '__main__':
+		main(parser.parse_args())

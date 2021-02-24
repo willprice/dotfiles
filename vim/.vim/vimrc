@@ -69,3 +69,10 @@ if _time > 8 && _time < 20
 else
     set background=dark
 endif
+
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END

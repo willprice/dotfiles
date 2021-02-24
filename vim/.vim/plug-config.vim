@@ -6,7 +6,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Editorconfig support: reads a .editorconfig file to keep editor configs
 " consistent across multiple dev machines
 Plug 'editorconfig/editorconfig-vim'
-
+Plug 'lambdalisue/suda.vim'
 
 " Mappings and movements {{{1
 " Sensible mappings for those nasty ex commands like :cnext, :bnext etc
@@ -107,7 +107,8 @@ Plug 'vim-scripts/bats.vim'
 Plug 'vim-scripts/nqc.vim'
 " jq syntax
 Plug 'vito-c/jq.vim'
-
+" rust
+Plug 'rust-lang/rust.vim'
 
 " Themes {{{1
 Plug 'freeo/vim-kalisi'
@@ -119,3 +120,4 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'sjl/badwolf'
 Plug 'iCyMind/NeoSolarized'
+
