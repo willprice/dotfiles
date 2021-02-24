@@ -12,7 +12,8 @@ getStartupHook sessionType = basicDesktopSetupCommands
 
 basicDesktopSetupCommands :: X ()
 basicDesktopSetupCommands = composeAll $ map spawn [ "wmname LG3D"
-                                                   , "setxkbmap -layoubt gb"
+                                                   , "setxkbmap -layout gb"
                                                    , "xmodmap ~/.Xmodmap"
+                                                   , "picom"
                                                    , "~/.config/polybar/run.sh bar"
                                                    ]

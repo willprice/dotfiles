@@ -44,9 +44,8 @@ windowClassesToFloat = [ "xmessage"
 windowClassesToIgnore = [
                         ]
 
-windowClassesToShift = [ ("VirtualBox", "6:VBox")
+windowClassesToShift = [ ("VirtualBox", "5:VBox")
                        , ("Anki", "4:Notes")
                        ]
                        -- TODO: Fix (check dia toolbox window)
-arbitraryRulesToFloat  = [("WM_WINDOW_ROLE", "toolbox_window")
-                         ]
+arbitraryRulesToFloat  = [ ("WM_WINDOW_ROLE", "toolbox_window") ]

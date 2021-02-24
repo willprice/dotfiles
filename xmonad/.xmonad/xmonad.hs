@@ -60,6 +60,7 @@ main = do
                                  , handleEventHook = fullscreenEventHook
                                  , normalBorderColor = lightBlue
                                  , focusedBorderColor = lightPink
+                                 , borderWidth = 3
                                  , XMonad.terminal = Commands.terminal
                                  , workspaces = ["1","2","3","4","5","6","7","8","9"]
                                  , XMonad.modMask = Keys.modMask

@@ -27,7 +27,13 @@ rofi = concat $ intersperse " "
    , "-terminal", "urxvt"
    , "-font", "'terminus 12'"
    ]
-
+rofiCalc = concat $ intersperse " "
+   [ "rofi"
+   , "-show", "calc"
+   , "-modi", "calc"
+   , "-no-show-match"
+   , "-no-sort" 
+   ]
 disableScreenSaver = "xset -dpms s off s noexpose s noblank"
 blankScreen        = "sh -c 'sleep 1; xset dpms force standby'"
 
@@ -38,4 +44,5 @@ lockscreen = "slock"
 
 documentationViewer = "zeal"
 
-screenShot = "import png:- | xclip -selection c -t image/png"
+screenShot = "import png:- | xclip -selection clipboard -t image/png"
+clipboardList = "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"

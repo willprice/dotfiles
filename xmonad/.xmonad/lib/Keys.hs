@@ -26,6 +26,8 @@ customKeys sessionType conf = M.fromList $ concat [ coreKeys conf
 coreKeys XConfig {XMonad.modMask = modm} =
         [ ((modm .|. shiftMask, xK_l), spawn "autorandr -c")
         , ((modm, xK_p), spawn rofi)
+        , ((modm, xK_c), spawn rofiCalc)
+        , ((modm .|. controlMask, xK_c), spawn clipboardList)
         , ((modm, xK_b), sendMessage ToggleStruts)
         , ((modm, xK_F10), spawn "systemctl suspend")
         , ((modm, xK_0), spawn "/home/will/.bin/color")
@@ -52,6 +54,10 @@ screenKeys XConfig {XMonad.modMask = modm} =
         , (action, mask) <- [ (W.view, noModMask) , (W.shift, shiftMask)]]
 
 
+-- For some reason we need the sleeps to work.
 mediaKeys XConfig {XMonad.modMask = modm} =
-        [((modm .|. shiftMask, xK_minus), spawn "xdotool key --clearmodifiers XF81AudioLowerVolume")
+        [ ((modm, xK_Down), spawn "sleep 0.1 && xdotool key --clearmodifiers XF86AudioLowerVolume")
+        , ((modm, xK_Up), spawn "sleep 0.1 && xdotool key --clearmodifiers XF86AudioRaiseVolume")
+        , ((modm, xK_Left), spawn "sleep 0.1 && xdotool key --clearmodifiers XF86AudioPrev")
+        , ((modm, xK_Right), spawn "sleep 0.1 && xdotool key --clearmodifiers XF86AudioNext")
         ]
