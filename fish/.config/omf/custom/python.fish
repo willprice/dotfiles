@@ -6,8 +6,8 @@ alias ipy=ipython
 alias ipy3=ipython3
 alias ipy2=ipython2
 
-if python -c 'import virtualfish'
-    eval (python -m virtualfish auto_activation)
+if python3 -c 'import virtualfish'
+    eval (python3 -m virtualfish auto_activation)
 end
 
 if test -d ~/.pyenv
