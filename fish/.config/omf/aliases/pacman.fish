@@ -1,5 +1,6 @@
-alias pacman "sudo pacman --color=auto"
-alias psyu "pacman -Syu"
+function pacman
+    sudo pacman --color=auto $argv
+end
 
 function p
     set has_options 0
