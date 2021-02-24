@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-20.04
     name: Test dotfiles linking and pre/post installation steps
     steps:
-      - run: sudo apt-get update -y && sudo apt-get install fish git stow python3 python3-pip vim 
-      - run: ./install-all.sh
+      - name: Install tools
+        run: sudo apt-get update -y && sudo apt-get install fish git stow python3 python3-pip vim 
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Test installing dotfiles
+        run: ./install-all.sh
 
