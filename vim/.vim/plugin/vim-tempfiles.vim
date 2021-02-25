@@ -10,9 +10,9 @@
 function! EnsureDirectoryExists (dir, ...)
     let permissions = a:0 >= 1 ? a:1 : 700
     if !isdirectory(a:dir)
-        call mkdir(a:dir, 'p')
-        call system('chmod ' . permissions . ' ' . shellescape(a:dir))
-        echom "Made directory: " . a:dir
+        silent call mkdir(a:dir, 'p')
+        silent call system('chmod ' . permissions . ' ' . shellescape(a:dir))
+        "echom "Made directory: " . a:dir
     endif
 endfunction
 
@@ -28,7 +28,6 @@ set updatetime=4000
 " Swap files describe the changes made to the original file and are created
 " every X seconds. This protects against editor crashes between saves.
 set swapfile
-
 
 call EnsureDirectoryExists($HOME . '/.tmp/backup')
 " Directory to save files before overwriting htem.

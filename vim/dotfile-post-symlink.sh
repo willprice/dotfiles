@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-vim +PlugInstall +qall
+#vim -c qall!
+vim -c 'PlugInstall!' -c 'messages' -c qall!
