@@ -11,6 +11,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Remove bashrc*
         run: rm -rf ~/.bash*
-      - name: Test installing dotfiles
+      - name: Install dotfiles
         run: ./install-all.sh
+      - name: Check vim can open without errors
+        run: vim -c 'qall'
+      - name: Check git doesn't error
+        run: cd $(mktemp -d); git init
+      - name: Check starting tmux session
+        run: tmux new -s test-session -d
 
