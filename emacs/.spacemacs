@@ -38,7 +38,6 @@ values."
      emacs-lisp
      ;; Markup languages
      org
-     ebib
      markdown
      pandoc
      bibtex

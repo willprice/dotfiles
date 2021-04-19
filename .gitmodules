@@ -19,3 +19,6 @@
 [submodule "fzf/.fzf"]
 	path = fzf/.fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "emacs/.emacs.d"]
+	path = emacs/.emacs.d
+	url = https://github.com/syl20bnr/spacemacs
