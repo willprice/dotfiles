@@ -1,0 +1,9 @@
+profile {
+    output eDP-1 disable
+    output "Samsung Electric Company C34H89x H4ZRC00322" mode 3440x1440@59.973Hz position 0,590
+    output "Dell Inc. DELL U2715H GH85D5410BXL" mode 2560x1440@59.951Hz position 3440,0 transform 270
+}
+
+profile {
+    output eDP-1 enable
+}
