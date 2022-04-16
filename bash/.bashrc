@@ -29,5 +29,9 @@ export PYGAME_HIDE_SUPPORT_PROMPT=hide
 # https://raspberrypi.stackexchange.com/questions/83254/pygame-and-alsa-lib-error
 export SDL_AUDIODRIVER=dsp
 
+# None of the termcap databases include foot. It is an xterm compatible
+# terminal, so we can validly change TERM to be xterm-256color
+[ "$TERM" = foot ] && export TERM=xterm-256color
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

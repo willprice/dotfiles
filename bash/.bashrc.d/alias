@@ -8,3 +8,6 @@ alias tmux='tmux -u'
 if command -v trash-put >/dev/null 2>&1; then
     alias rm='echo "Use trash-put instead of rm"'
 fi
+if command -v nvim >/dev/null 2>&1; then
+    alias vim=nvim
+fi
