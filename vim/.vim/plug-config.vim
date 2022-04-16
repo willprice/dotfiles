@@ -109,6 +109,8 @@ Plug 'vim-scripts/nqc.vim'
 Plug 'vito-c/jq.vim'
 " rust
 Plug 'rust-lang/rust.vim'
+" Racket
+Plug 'Olical/conjure'
 
 " Themes {{{1
 Plug 'freeo/vim-kalisi'

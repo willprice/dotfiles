@@ -57,6 +57,7 @@ filetype plugin indent on
 syntax on
 " Fold based on fold-markers
 set foldmethod=marker
+let maplocalleader=','
 
 
 " Appearance {{{1
