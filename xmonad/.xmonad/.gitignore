@@ -1,6 +1,0 @@
-xmonad-x86_64-linux
-xmonad.state
-*.errors
-*.hi
-*.o
-.stack-work
